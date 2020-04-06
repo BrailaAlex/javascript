@@ -1,8 +1,7 @@
-const n = 11;
-let sum = 0;
+const n = 20;
+let sum = 1;
 
-for (let i = 1; i <= n; i++) {
-    sum += i.toString();
+for (let i = 2; i <= n; i++) {
+    sum += i.toString()
 }
-
 console.log(sum)
