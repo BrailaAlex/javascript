@@ -1,14 +1,14 @@
 const m = 3;
 const n = 15;
 let y = m;
-let sum = 1;
+let result = 1;
 
 do {
     if (y % 2 === 1) {
-        sum *= y;
+        result *= y;
     }
     y += 1;
 }
 while (y <= n);
 
-console.log('Result: ', sum);
+console.log('Result: ', result);
