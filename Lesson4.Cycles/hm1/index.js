@@ -1,7 +1,7 @@
-const n = 20;
-let sum = '1';
+const n = 10;
+let sum = '';
 
-for (let i = 2; i <= n; i++) {
-    sum += i.toString();
+for (let i = 1; i <= n; i++) {
+    sum += i;
     console.log(sum);
 }
