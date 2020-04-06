@@ -1,11 +1,11 @@
 let m = 1;
 const n = 171;
-let result = 0;
+let sum = 0;
 
 do {
-    result += m;
+    sum += m;
     m += 1;
 }
 while (m <= n)
 
-console.log('Result: ', result);
+console.log('Result: ', sum);
