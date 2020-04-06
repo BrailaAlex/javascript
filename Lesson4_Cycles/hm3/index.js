@@ -1,6 +1,12 @@
-for (let i = 1; i <= 5; i++) {
-    console.log('\n=> ' + i + ' <=\n\n')
-    for (let j = 1; j <= 10; j++) {
-        console.log(i + ' x ' + j + ' = ' + i * j);
+let sum = 0;
+for (let i = 0; i <= 1000; i++) {
+    if (i % 2 !== 0) {
+        console.log('Found');
+        sum += i;
     }
+}
+if (sum * 5 > 5000) {
+    console.log('Bigger')
+} else {
+    console.log('Smaller or equal')
 }
