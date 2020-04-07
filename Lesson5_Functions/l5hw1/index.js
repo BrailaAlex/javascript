@@ -8,7 +8,6 @@
 //     }
 //     return result;
 // }
-getSum(4, 18)
 
 function getSum(a, b) {
     let sum = 0;
@@ -19,5 +18,6 @@ function getSum(a, b) {
     }
     return sum;
 }
+getSum(4, 18)
 
 // console.log(getSum(5, 25));
