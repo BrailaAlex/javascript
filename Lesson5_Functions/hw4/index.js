@@ -1,16 +1,16 @@
 function compareSums(a, b, c, d) {
-    if (firstSum > secondSum) {
+    if (sum(a, b) > sum(c, d)) {
         return true;
     } else {
-        false
+        return false;
     }
 }
 
-function firstSum(a, b) {
+function sum(a, b) {
     return a + b;
 }
 
-function secondSum(c, d) {
+function sum(c, d) {
     return c + d;
 }
 
