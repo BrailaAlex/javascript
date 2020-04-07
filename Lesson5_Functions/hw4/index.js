@@ -1,7 +1,7 @@
 function compareSums(a, b, c, d) {
     if (sum1 > sum2) {
         return true;
-    } else {
+    } else if (sum1 < sum2) {
         return false;
     }
 
