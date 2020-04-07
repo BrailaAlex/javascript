@@ -13,7 +13,7 @@
 
 // getPrimes(35);
 
-function getPrime(n) {
+function getPrimes(n) {
     step1: for (let i = 2; i <= n; i++) {
         for (let j = 2; j < i; j++) {
             if (i % j === 0) {
@@ -23,4 +23,4 @@ function getPrime(n) {
         console.log(i);
     }
 }
-getPrime(35);
+getPrimes(35);
