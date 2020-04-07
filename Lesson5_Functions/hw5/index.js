@@ -1,26 +1,10 @@
-// function getPrimes(num) {
-//     for (let i = 1; i <= num; i++) {
-//         if (isPrime(i)) console.log(i);
-//     }
-// }
+let result = 0;
 
-// function isPrime(num) {
-//     for (let j = 2; j < num; j++) {
-//         if (num % j === 0) return false;
-//     }
-//     return true;
-// }
-
-// getPrimes(35);
-
-function getPrimes(n) {
-    step1: for (let i = 2; i <= n; i++) {
-        for (let j = 2; j < i; j++) {
-            if (i % j === 0) {
-                continue step1;
-            }
+function findDivCount(a, b, n) {
+    for (let i = a; i <= b; i++) {
+        if (i % n === 0) {
+            result++;
         }
-        console.log(i);
     }
+    return result;
 }
-getPrimes(35);
