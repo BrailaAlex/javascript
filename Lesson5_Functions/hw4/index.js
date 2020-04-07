@@ -1,18 +1,17 @@
 function compareSums(a, b, c, d) {
-    if (sum1 > sum2) {
+    if (sum1() > sum2()) {
         return true;
-    } else if (sum1 < sum2) {
+    } else {
         return false;
     }
 
-    function sum1(a, b) {
+    function sum1() {
         return a + b;
     }
 
-    function sum2(c, d) {
+    function sum2() {
         return c + d;
     }
 }
 
-
-compareSums(4, 3, 7, 1);
+compareSums(4, 5, 7, 1);
