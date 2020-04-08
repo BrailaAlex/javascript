@@ -11,7 +11,6 @@ function isPrime(num) {
     return true;
 }
 
-getPrimes(35);
 
 // function getPrimes(n) {
 //     step1: for (let i = 2; i <= n; i++) {
