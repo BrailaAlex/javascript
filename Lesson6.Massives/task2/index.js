@@ -20,4 +20,4 @@ function getSum(arr) {
     return sum;
 }
 
-console.log('result: ' + getSum(numbers));
+// console.log('result: ' + getSum(numbers));
