@@ -12,9 +12,10 @@ function getSum(arr) {
     if (!Array.isArray(arr)) return null;
 
     let sum = 0;
-    for (let num of numbers)
+    for (let num of numbers) {
         sum += num;
+    }
     return sum;
 }
 
-// console.log('result: ' + getSum(numbers));
+console.log('result: ' + getSum(numbers));
