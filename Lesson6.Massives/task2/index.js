@@ -6,7 +6,7 @@
 //     console.log(numbers[i]);
 //     sumOfNumbers += numbers[i];
 // }
-const numbers = [11, 22, 44, 55, 66];
+// const numbers = [11, 22, 44, 55, 66];
 
 function getSum(arr) {
     if (!Array.isArray(arr)) return null;
@@ -18,4 +18,4 @@ function getSum(arr) {
     return sum;
 }
 
-console.log('result: ' + getSum(numbers));
+// console.log('result: ' + getSum(numbers));
