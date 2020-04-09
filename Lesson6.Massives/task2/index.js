@@ -12,10 +12,8 @@ function getSum(arr) {
         return null;
     }
     let sumOfNumbers = 0;
-    for (let num of numbers) // как альтернатива для варианта ниже
-    // for (let i = 0; i < numbers.length; i++) {
-    //     console.log(numbers[i]);
-    {
+    for (let num of numbers) { // как альтернатива для варианта ниже // for (let i = 0; i < numbers.length; i++) //     console.log(numbers[i]);
+
         sumOfNumbers += num;
     }
     return sumOfNumbers;
