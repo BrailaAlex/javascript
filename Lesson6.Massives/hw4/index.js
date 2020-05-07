@@ -8,4 +8,4 @@ function increaseEvenEl(arr, delta) {
     }
     return newArray;
 }
-// console.log(increaseEvenEl([1, 2, 3, 4, 5, 6, 7], 10));
+console.log(increaseEvenEl([1, 2, 3, 4, 5, 6, 7], 10));

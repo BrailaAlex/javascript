@@ -6,4 +6,4 @@ function squareArray(arr) {
     }
     return squareArr;
 }
-console.log(squareArray([5, 6, 7, 8]));
+console.log(squareArray([12, 52, 65, 13]));

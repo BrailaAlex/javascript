@@ -23,4 +23,4 @@ function secondNumber(a) {
     for (let j = 0; j <= 10; j++) console.log(a + ' * ' + j + ' = ' + a * j);
 }
 
-firstNumber(3);
+firstNumber();

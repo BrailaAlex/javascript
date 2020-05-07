@@ -13,5 +13,4 @@ function compareSums(a, b, c, d) {
         return c + d;
     }
 }
-
-compareSums(4, 5, 7, 1);
+console.log(compareSums(4, 5, 7, 1));
