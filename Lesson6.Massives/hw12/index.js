@@ -2,7 +2,7 @@ function removeDublicates(array) {
     const uniqueSet = [...new Set(array)];
     return uniqueSet;
 }
-// console.log(removeDublicates([25, 65, 32, 65, 95, 75, 85, 95]));
+console.log(removeDublicates([25, 65, 32, 65, 95, 75, 85, 95]));
 // function uniqueCount(array) {
 
 //     let uniqueArr = [];
@@ -37,4 +37,4 @@ function removeDublicates(array) {
 //     }
 //     return uniqueArr;
 // }
-console.log(uniqueCount([25, 65, 32, 65, 95, 75, 85, 95]))
+// console.log(uniqueCount([25, 65, 32, 65, 95, 75, 85, 95]))
