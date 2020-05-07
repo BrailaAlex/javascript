@@ -4,7 +4,7 @@
 //     return uniqueSet;
 // }
 // console.log(removeDublicates([25, 65, 32, 65, 95, 75, 85, 95]));
-function removeDublicate(array) {
+function removeDublicates(array) {
 
     let uniqueArr = [];
 
