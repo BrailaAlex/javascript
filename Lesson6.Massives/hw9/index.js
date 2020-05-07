@@ -9,4 +9,4 @@ function withdraw(clients, balances, client, amount) {
     }
 }
 
-console.log(withdraw(['Ann', 'John', 'Bob'], [1500, 600, 75], 'Bob', 65))
+// console.log(withdraw(['Ann', 'John', 'Bob'], [1500, 600, 75], 'Bob', 65))
