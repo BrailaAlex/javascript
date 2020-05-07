@@ -5,4 +5,4 @@ function includes(arr, n) {
     return false;
 }
 
-// console.log(includes([25, 32, 65, 75, 85, 95], 3));
+console.log(includes([25, 32, 65, 75, 85, 95], 3));
