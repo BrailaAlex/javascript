@@ -1,6 +1,6 @@
 function getSubArray(arr, n) {
     let subArr = [];
-    for (let i = 0; i <= n; i++) {
+    for (let i = 0; i < n; i++) {
         subArr.push(arr[i]);
     }
     return subArr;
