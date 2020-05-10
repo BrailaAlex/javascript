@@ -10,7 +10,7 @@ console.log(flatArray(initArray));
 
 // [1, 2, 3, 4].reduce(function(acc, num) {
 //     return acc + num;
-// });
+// }, 6);
 
 // 1: 0, 1 => 1
 // 2: 1, 2 => 3
