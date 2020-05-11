@@ -1,23 +1,27 @@
-addPropertyV1 = (userData, userId) => {
-    userData.id = userId;
-    return userData;
+addPropertyV1 = (obj, key, value) => {
+    obj[key] = value;
+    return obj;
 }
-addPropertyV2 = (userData, userId) => {
-    const sourceData = { id: userId };
-    return returnedData = Object.assign(userData, sourceData);
+addPropertyV2 = (obj, key, value) => {
+    const sourceObj = {
+        [key]: value
+    };
+    return returnedObj = Object.assign(obj, sourceObj);
 }
-addPropertyV3 = (userData, userId) => {
-    const cloneData = Object.assign({}, userData)
-    const sourceData = { id: userId };
-    return returnedData = Object.assign(cloneData, sourceData);
+addPropertyV3 = (obj, key, value) => {
+    const cloneObj = Object.assign({}, obj)
+    const sourceObj = {
+        [key]: value
+    };
+    return returnedData = Object.assign(cloneObj, sourceObj);
 }
-addPropertyV4 = (userData, userId) => {
-    const cloneData = Object.assign({}, userData)
-    return returnedData = {...cloneData, id: userId };
+addPropertyV4 = (obj, key, value) => {
+    const cloneObj = Object.assign({}, obj)
+    return returnedObj = {...cloneObj, [key]: value };
 }
-const user = {
-    name: 'Add',
+const transaction = {
+    value: 170,
 }
-const result = addPropertyV4(user, '3256897414');
+const result = addPropertyV4(transaction, 'currency', 'USD');
 
 console.log(result);

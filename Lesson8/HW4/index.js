@@ -19,9 +19,9 @@
      return returnedData = {...cloneData, id: userId };
  };
 
- //  const user = {
- //      name: 'Add',
- //  }
- //  const result = addPropertyV4(user, '3256897414');
+ const user = {
+     name: 'Add',
+ }
+ const result = addPropertyV1(user, '3256897414');
 
- //  console.log(result);
+ console.log(result);
