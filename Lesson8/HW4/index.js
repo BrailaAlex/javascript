@@ -12,12 +12,12 @@ addPropertyV3 = (userData, userId) => {
     return returnedData = Object.assign(cloneData, sourceData);
 }
 addPropertyV4 = (userData, userId) => {
-    const cloneData = Object.assign({}, userData)
-    return returnedData = {...cloneData, id: userId };
-}
-const user = {
-    name: 'Add',
-}
-const result = addPropertyV4(user, '3256897414');
+        const cloneData = Object.assign({}, userData)
+        return returnedData = {...cloneData, id: userId };
+    }
+    // const user = {
+    //     name: 'Add',
+    // }
+    // const result = addPropertyV4(user, '3256897414');
 
-console.log(result);
+// console.log(result);
