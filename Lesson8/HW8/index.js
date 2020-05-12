@@ -1,7 +1,6 @@
 const buildObject = (keysList, valuesList) => {
-    obj = {};
-    keysList.forEach((el, i) => obj[el] = valuesList[i]);
-    return obj;
+    return keysList.reduce((result, num, i) =>
+        (result[num] = valuesList[i], result), {});
 }
 
 const keysList = ['name', 'surname', 'age'];
