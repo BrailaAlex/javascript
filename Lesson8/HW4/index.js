@@ -14,13 +14,13 @@
  };
 
  function addPropertyV4(userData, userId) {
-     let id = { id: userId };
-     return Object.assign({...userData }, id);
+     let sorceData = { id: userId };
+     return {...userData, sorceData };
  };
 
  const user = {
      name: 'Add',
  }
- const result = addPropertyV3(user, '3256897414');
+ const result = addPropertyV4(user, '3256897414');
 
  console.log(result);
