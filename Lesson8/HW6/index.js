@@ -7,10 +7,10 @@ mergeObjectsV2 = (obj1, obj2) => {
 };
 
 mergeObjectsV3 = (obj1, obj2) => {
-    return resultedObj = {...obj1, ...obj2 };
+    return resultedObj = {... {}, ...obj1, ...obj2 };
 };
 mergeObjectsV4 = (obj1, obj2) => {
-    return resultedObj = {...obj2, ...obj1 };
+    return resultedObj = {... {}, ...obj2, ...obj1 };
 };
 
 const obj1 = {

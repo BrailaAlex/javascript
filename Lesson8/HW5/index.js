@@ -9,19 +9,17 @@ addPropertyV2 = (obj, key, value) => {
     return returnedObj = Object.assign(obj, sourceObj);
 }
 addPropertyV3 = (obj, key, value) => {
-    const cloneObj = Object.assign({}, obj)
     const sourceObj = {
         [key]: value
     };
-    return returnedData = Object.assign(cloneObj, sourceObj);
+    return returnedData = Object.assign({}, obj, sourceObj);
 }
 addPropertyV4 = (obj, key, value) => {
-    const cloneObj = Object.assign({}, obj)
-    return returnedObj = {...cloneObj, [key]: value };
+    return returnedObj = {...obj, [key]: value };
 }
 const transaction = {
     value: 170,
 }
-const result = addPropertyV4(transaction, 'currency', 'USD');
+const result = addPropertyV2(transaction, 'currency', 'USD');
 
 console.log(result);
