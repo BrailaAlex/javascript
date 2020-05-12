@@ -1,4 +1,4 @@
-const pickProps = obj => {
+const getAdults = obj => {
     let newObj = {};
     for (let key in obj) {
         if (obj[key] >= 18) {
@@ -9,5 +9,5 @@ const pickProps = obj => {
 }
 
 const obj = { a: 18, b: 21, c: 13 };
-let result = pickProps(obj);
+let result = getAdults(obj);
 console.log(result);
