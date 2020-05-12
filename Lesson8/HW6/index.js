@@ -1,16 +1,20 @@
-mergeObjectsV1 = (obj1, obj2) => {
-    return resultedObj = Object.assign({}, obj1, obj2);
+const mergeObjectsV1 = (obj1, obj2) => {
+    let resultedObj = Object.assign({}, obj1, obj2);
+    return resultedObj;
 };
 
-mergeObjectsV2 = (obj1, obj2) => {
-    return resultedObj = Object.assign({}, obj2, obj1);
+const mergeObjectsV2 = (obj1, obj2) => {
+    let resultedObj = Object.assign({}, obj2, obj1);
+    return resultedObj;
 };
 
-mergeObjectsV3 = (obj1, obj2) => {
-    return resultedObj = {... {}, ...obj1, ...obj2 };
+const mergeObjectsV3 = (obj1, obj2) => {
+    let resultedObj = {...obj1, ...obj2 }
+    return resultedObj;
 };
-mergeObjectsV4 = (obj1, obj2) => {
-    return resultedObj = {... {}, ...obj2, ...obj1 };
+const mergeObjectsV4 = (obj1, obj2) => {
+    let resultedObj = {...obj2, ...obj1 }
+    return resultedObj;
 };
 
 const obj1 = {
