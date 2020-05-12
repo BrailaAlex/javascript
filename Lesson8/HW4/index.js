@@ -15,7 +15,7 @@
 
  function addPropertyV4(userData, userId) {
      let sorceData = { id: userId };
-     return {...userData, sorceData };
+     return Object.assign({...userData }, sorceData);
  };
 
  const user = {
