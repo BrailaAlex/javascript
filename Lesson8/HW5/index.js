@@ -18,7 +18,7 @@ addPropertyV4 = (obj, key, value) => {
     const sourceObj = {
         [key]: value
     };
-    return {...obj, ...sourceObj };
+    return Object.assign({...obj }, {...sourceObj });
 }
 const transaction = {
     value: 170,
