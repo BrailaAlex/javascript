@@ -14,7 +14,7 @@ const customers = {
 }
 
 const getCustomersList = obj => {
-    cloneObj = {...obj };
+    const cloneObj = {...obj };
     return Object.entries(cloneObj).map(arr => {
         let id = { id: arr.shift() };
         return arr[0] = {...arr[0], ...id }
