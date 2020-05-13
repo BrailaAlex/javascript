@@ -40,7 +40,7 @@ const user = {
 //     ...restProps,
 // }
 
-const copyObj = obj => copy = Object.assign({}, obj);
+const copyObj = obj => Object.assign({}, obj);
 
-// console.log(copyObj(user, user));
-// console.log(user);
+console.log(copyObj(user, user));
+console.log(user);
