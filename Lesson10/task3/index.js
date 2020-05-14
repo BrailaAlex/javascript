@@ -3,13 +3,13 @@
 
 const multiRound = num => {
     return matharray = [
-        Math.floor(num),
-        Math.round(num),
-        Math.ceil(num),
-        Math.trunc(num), +num.toFixed()
+        Math.floor(num * 100) / 100,
+        Math.round(num * 100) / 100,
+        Math.ceil(num * 100) / 100,
+        Math.trunc(num * 100) / 100, +num.toFixed(2)
     ]
 }
 
-const num = 17.55;
+const num = -17.5555;
 let result = multiRound(num);
 console.log(result)
