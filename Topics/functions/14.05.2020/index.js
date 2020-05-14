@@ -59,7 +59,6 @@ const mult = (a, b) => a * b;
 /* output: number
 */
 const square = a => a * a;
-console.log('Hello');
 
 
 /*
