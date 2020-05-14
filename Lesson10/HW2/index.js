@@ -2,7 +2,7 @@
 // outptut: array of random values
 
 const getRandomNumbers = (length, start, end) => {
-    if ((end - start) < 1 && Math.ceil(start) === Math.ceil(end) && start > end) return null
+    if ((end - start) < 1 && Math.ceil(start) === Math.ceil(end) || start > end) return null
     let arr = [];
     arr.length = length;
     return arr.fill().map(num => {
