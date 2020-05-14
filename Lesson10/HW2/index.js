@@ -2,11 +2,11 @@
 // outptut: array of random values
 
 const getRandomNumbers = (length, start, end) => {
-    if ((end - start) < 1 && Math.ceil(start) === Math.ceil(end)) return null
+    if (start > end && (end - start) < 1 && Math.ceil(start) === Math.ceil(end)) return null
     let arr = [];
     arr.length = length;
     return arr.fill().map(num => {
-        num = Math.floor(Math.random() * (end - start)) + start;
+        num = Math.random() * (end - start) + start;
         if (num >= 0) return Math.ceil(num);
         return Math.floor(num);
     })
