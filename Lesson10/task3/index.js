@@ -1,7 +1,7 @@
 // input: number
 // output: array
 
-const multiRound = num => matharray = [
+const multiRound = num => [
     Math.floor(num * 100) / 100,
     Math.round(num * 100) / 100,
     Math.ceil(num * 100) / 100,
