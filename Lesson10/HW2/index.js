@@ -6,7 +6,7 @@ const getRandomNumbers = (length, start, end) => {
     let arr = [];
     arr.length = length;
     return arr.fill().map(num => {
-        num = Math.random() * (end - start) + start;
+        num = Math.floor(Math.random() * (end - start)) + start;
         if (num >= 0) return Math.ceil(num);
         return Math.floor(num);
     })
