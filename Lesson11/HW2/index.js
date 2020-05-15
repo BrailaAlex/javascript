@@ -1,26 +1,12 @@
-// input: array
-// outptut: array of random values
+// input: string!, strin2;
+// output: number = quantity of entries of string2 in string1;
 
-const getRandomNumbers = (length, start, end) => {
-    if ((end - start) < 1 && Math.ceil(start) === Math.ceil(end) || start > end) return null
-    let arr = [];
-    arr.length = length;
-    return arr.fill().map(num => {
-        num = Math.random() * (end - start) + start;
-        if (num >= 0) return Math.ceil(num);
-        return Math.floor(num);
-    })
+const string1 = 'language whose formatting conventions should';
+const string2 = 'a'
+const countOccurences = (str1, elem) => {
+    return occurences = str1.split(elem).length - 1;
+    // let occurences = str1.match(elem)   
 }
 
-console.log(getRandomNumbers(7, -33, 22));
-
-
-
-
-
-
-
-
-
-
-const someArr = [17.1, '25.2text', '31.3 some', null, NaN, Infinity, undefined];
+let res = countOccurences(string1, string2)
+console.log(res);
