@@ -13,13 +13,17 @@ const splitString = (string, len = 10) => {
         let strArrElem = string.substr(elemStart, len);
         if (strArrElem.length === 0) break;
         if (strArrElem.length < len) {
-            strArrElem = strArrElem + '.'.repeat(len - strArrElem.length)
+            strArrElem = strArrElem + '.'.repeat(len - strArrElem.length);
         }
-        elemStart += len;
         strArr.push(strArrElem);
+        elemStart += len;
     }
     return strArr;
 }
 
-const res = splitString(text, length)
-console.log(res);
+// const text = 'These arguments customize the behavior of the function and let app';
+// // const text = 55
+// const length = 15;
+
+// const res = splitString(text, length)
+// console.log(res);
