@@ -4,18 +4,18 @@
 
 
 const splitString = (text, len = 10) => {
-    if (typeof string !== 'string') return null
+    if (typeof text !== 'string') return null
     const strArr = [];
     let elemStart = 0;
     while (true) {
-        let strArrElem = text.substr(elemStart, len);
-        if (strArrElem.length === 0) {
+        let chunk = text.substr(elemStart, len);
+        if (chunk.length === 0) {
             break;
         };
-        if (strArrElem.length < len) {
-            strArrElem = strArrElem + '.'.repeat(len - strArrElem.length);
+        if (chunk.length < len) {
+            chunk = chunk + '.'.repeat(len - chunk.length);
         };
-        strArr.push(strArrElem);
+        strArr.push(chunk);
         elemStart += len;
     }
     return strArr;
