@@ -22,5 +22,5 @@ const calc = expression => {
     }
     return `${expression}  = ${result}`;
 };
-const expr = '22 / 35'
-console.log(calc(expr));
+// const expr = '22 / 35'
+// console.log(calc(expr));
