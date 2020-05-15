@@ -2,8 +2,7 @@
 // output: array with cleaned elements
 
 const cleanTransactionslist = arr => {
-    arr
-        .filter(num => typeof + num === 'number' && !isNaN(num))
+    return arr.filter(num => typeof + num === 'number' && !isNaN(num))
         .map(num => '$' + (+num).toFixed(2));
 }
 
