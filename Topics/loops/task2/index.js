@@ -7,7 +7,7 @@ for (let i = m; i <= n; i++) {
     if (i % 5 === 0) {
         // console.log("3 if is called")
         console.log(i);
-        continue;
+        // continue;
     }
 
     if (i % 2 === 0 && i % 4 !== 0) {
@@ -24,9 +24,14 @@ for (let i = m; i <= n; i++) {
     if (i % 4 === 0) {
         // console.log("3 if is called " + i);
         result *= i;
-        continue;
     }
+
 }
 
 
 // console.log(result);
+
+if () {
+    // console.log("3 if is called " + i);
+    console.log(result);
+}

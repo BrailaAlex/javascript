@@ -1,6 +1,6 @@
 const buildObject = (keysList, valuesList) => {
     return keysList.reduce((result, num, i) =>
-        (result[num] = valuesList[i], result), {});
+        ({...result, [num]: valuesList[i] }), {});
 }
 
 const keysList = ['name', 'surname', 'age'];

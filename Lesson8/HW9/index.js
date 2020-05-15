@@ -3,7 +3,7 @@ const pickProps = (obj, arr) => {
     for (let key in obj) {
         for (let i of arr) {
             if (i == key) {
-                newObj[key] = obj[key]
+                newObj[key] = obj[key];
             }
         }
     }

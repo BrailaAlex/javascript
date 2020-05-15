@@ -1,6 +1,7 @@
 const compareObjects = (obj1, obj2) => {
     const arr1 = Object.entries(obj1).flat();
     const arr2 = Object.entries(obj2).flat();
+    console.log(arr1);
     if (arr1.length !== arr2.length) {
         return false;
     }

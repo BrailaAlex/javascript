@@ -16,11 +16,11 @@
 // 2. check if num % i !==0 => false
 function isPrime(num) {
     for (let i = 2; i < num; i++) {
-        console.log('Check for: ' + i);
+        // console.log('Check for: ' + i);
         if (num % i === 0) return false;
         // console.log('If is called for: ' + i);
     }
-    console.log("Loop is finished");
+    // console.log("Loop is finished");
     return true;
 }
 
