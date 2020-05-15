@@ -3,8 +3,8 @@
 
 const countOccurrences = (str1, elem) => {
     if (elem.length === 0) return null;
-    let midArray = str1.split(elem);
-    return occurences = midArray.length - 1;
+    return str1.split(elem).length - 1;
+
 }
 
 // const string1 = 'language whose formatting conventions should';
