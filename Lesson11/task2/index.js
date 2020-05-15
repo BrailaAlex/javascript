@@ -27,9 +27,9 @@ const contacts = [{
 // output: Sorted by name order list of contacts
 
 const sortContacts = (contacts, isAsc = true) => {
-    if (!Array.isArray(contacts))
-        if (!isAsc) return contacts
-            .sort((a, b) => b.name.localeCompare(a.name));
+    if (!Array.isArray(contacts)) return null;
+    if (!isAsc) return contacts
+        .sort((a, b) => b.name.localeCompare(a.name));
     return contacts.
     sort((a, b) => a.name.localeCompare(b.name));
 
