@@ -6,7 +6,7 @@ const cleanTransactionslist = arr => {
     // for (let num of arr) {
     //     if (!isNaN(num)) newArr.push(num);
     // };
-    return arr.filter(num => !isNaN(num)).map(num => '$' + (+num).toFixed(2));
+    return arr.filter(num => typeof + num === 'number' && !isNaN(num)).map(num => '$' + (+num).toFixed(2));
 };
 
 // const array = ['  1.9', '2.75 dollar', '3.25hryvna', '  2.758  '];
