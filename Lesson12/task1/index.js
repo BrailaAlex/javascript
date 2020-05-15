@@ -13,13 +13,13 @@ const calc = expression => {
             result = +a + +b;
             break;
         case '-':
-            result = +a - +b;
+            result = a - b;
             break;
         case '*':
-            result = +a * +b;
+            result = a * b;
             break;
         case '/':
-            result = +a / +b;
+            result = a / b;
             break;
     }
     return `${expression} = ${result}`;
