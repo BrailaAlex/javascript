@@ -3,12 +3,12 @@
 
 
 
-const splitString = (string, len = 10) => {
+const splitString = (text, len = 10) => {
     if (typeof string !== 'string') return null
     let strArr = [];
     elemStart = 0;
     while (true) {
-        let strArrElem = string.substr(elemStart, len);
+        let strArrElem = text.substr(elemStart, len);
         if (strArrElem.length === 0) {
             break;
         };
