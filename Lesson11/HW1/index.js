@@ -6,7 +6,7 @@
 const splitString = (text, len = 10) => {
     if (typeof string !== 'string') return null
     let strArr = [];
-    elemStart = 0;
+    let elemStart = 0;
     while (true) {
         let strArrElem = text.substr(elemStart, len);
         if (strArrElem.length === 0) {
