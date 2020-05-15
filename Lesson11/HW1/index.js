@@ -9,10 +9,12 @@ const splitString = (string, len = 10) => {
     elemStart = 0;
     while (true) {
         let strArrElem = string.substr(elemStart, len);
-        if (strArrElem.length === 0) break;
+        if (strArrElem.length === 0) {
+            break;
+        };
         if (strArrElem.length < len) {
             strArrElem = strArrElem + '.'.repeat(len - strArrElem.length);
-        }
+        };
         strArr.push(strArrElem);
         elemStart += len;
     }
