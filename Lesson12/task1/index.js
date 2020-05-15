@@ -8,16 +8,16 @@ const calc = expression => {
     let result; //используем перпеменную, чтобы в нее помещать результат      //элементу имя переменной
     switch (operator) {
         case '+':
-            result = +a + Number(b);
+            result = +a + +b;
             break;
         case '-':
-            result = a - b;
+            result = +a - +b;
             break;
         case '*':
-            result = a * b;
+            result = +a * +b;
             break;
         case '/':
-            result = a / b;
+            result = +a / +b;
             break;
     }
     return `${expression}  = ${result}`;
