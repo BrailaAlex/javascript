@@ -14,7 +14,7 @@ const length = 15;
 //splitText
 // splitString('abcd efgh', 4) => 'Abcd\n efg\nH']
 
-const splitText = (text, len) => {
+const splitText = (text, len = 10) => {
     if (typeof text !== 'string') return null;
     const strArr = [];
     let startPosition = 0
