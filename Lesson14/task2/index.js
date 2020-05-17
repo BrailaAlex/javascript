@@ -29,7 +29,7 @@ const createMessenger = () => {
     };
 };
 
-// export default createMessenger;
+export default createMessenger;
 
 const messenger1 = createMessenger(); //присваиваем ф-ию в другую переменную
 const messenger2 = createMessenger();
