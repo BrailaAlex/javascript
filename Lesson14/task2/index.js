@@ -5,7 +5,7 @@
 //вызоавы разных переменных messenger1 и 2 создаем два разных лексических окружения с разными значениями
 //переменной message
 
-const createMessenger = () => {
+export default function createMessenger() {
     let message = 'Just learn it';
     let sender = 'Gromcode';
 
@@ -13,7 +13,6 @@ const createMessenger = () => {
         // const sender = 'Gromcode'
         console.log(`${name}, ${message}! Your ${sender}`);
     }
-
 
     function setMessage(text) {
         message = text;
@@ -28,8 +27,6 @@ const createMessenger = () => {
         setSender,
     };
 };
-
-export default createMessenger;
 
 const messenger1 = createMessenger(); //присваиваем ф-ию в другую переменную
 const messenger2 = createMessenger();
