@@ -6,12 +6,12 @@
 //переменной message
 
 export default function createMessenger() {
-    let message = 'Just learn it';
+    let message = 'Just learn it!';
     let sender = 'Gromcode';
 
     function sendMessage(name) {
         // const sender = 'Gromcode'
-        console.log(`${name}, ${message}! Your ${sender}`);
+        console.log(`${name}, ${message} Your ${sender}`);
     }
 
     function setMessage(text) {
@@ -28,15 +28,15 @@ export default function createMessenger() {
     };
 };
 
-// const messenger1 = createMessenger(); //присваиваем ф-ию в другую переменную
-// const messenger2 = createMessenger();
-// const messenger3 = createMessenger();
+const messenger1 = createMessenger(); //присваиваем ф-ию в другую переменную
+const messenger2 = createMessenger();
+const messenger3 = createMessenger();
 
-// messenger1.sendMessage('Bob'); //переходим к методу sendMessage() обьекта. 
+messenger1.sendMessage('Bob'); //переходим к методу sendMessage() обьекта. 
 // //который возвращает ф-ия createMessanger()
 
-// messenger2.setMessage('Goodjob');
-// messenger2.sendMessage('Bob');
+messenger2.setMessage('Good job!');
+messenger2.sendMessage('Bob');
 
-// messenger3.setSender('Tom');
-// messenger3.sendMessage('Bob');
+messenger3.setSender('Tom');
+messenger3.sendMessage('Bob');
