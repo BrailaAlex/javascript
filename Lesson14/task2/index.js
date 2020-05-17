@@ -28,15 +28,15 @@ export default function createMessenger() {
     };
 };
 
-const messenger1 = createMessenger(); //присваиваем ф-ию в другую переменную
-const messenger2 = createMessenger();
-const messenger3 = createMessenger();
+// const messenger1 = createMessenger(); //присваиваем ф-ию в другую переменную
+// const messenger2 = createMessenger();
+// const messenger3 = createMessenger();
 
-messenger1.sendMessage('Bob'); //переходим к методу sendMessage() обьекта. 
-//который возвращает ф-ия createMessanger()
+// messenger1.sendMessage('Bob'); //переходим к методу sendMessage() обьекта. 
+// //который возвращает ф-ия createMessanger()
 
-messenger2.setMessage('Goodjob');
-messenger2.sendMessage('Bob');
+// messenger2.setMessage('Goodjob');
+// messenger2.sendMessage('Bob');
 
-messenger3.setSender('Tom');
-messenger3.sendMessage('Bob');
+// messenger3.setSender('Tom');
+// messenger3.sendMessage('Bob');
