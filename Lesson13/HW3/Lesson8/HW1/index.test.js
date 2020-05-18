@@ -8,7 +8,7 @@ it('should return an array', () => {
     const operation = transaction['operation'];
     expect(operation).toEqual("sale");
 })
-it('should return opoeration time', () => {
+it('should return operation time', () => {
     const operationTime = transaction['operation time'];
     expect(operationTime).toEqual(1584029990001);
 })
