@@ -1,7 +1,7 @@
 //input: array of numbers;
 //output: array with squared numbers;
 
-function squareArray1(arr) {
+function squareArray(arr) {
     if (!Array.isArray) return null;
     //1 - good
     let res = []; //создаем новый пустой массив
