@@ -1,14 +1,14 @@
 // counter
 
-let count = 0;
-const makeCounter = () => {
+export const makeCounter = () => {
+    let count = 0;
     return function add() {
         return count++;
     }
 
 };
 
-export { makeCounter as counterMake };
+// export { makeCounter };
 
 const counter1 = makeCounter();
 const counter2 = makeCounter();
