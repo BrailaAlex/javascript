@@ -1,6 +1,6 @@
 // counter
 
-export const makeCounter = () => {
+const makeCounter = () => {
     let count = 0;
     return function add() {
         return count++;
@@ -8,7 +8,7 @@ export const makeCounter = () => {
 
 };
 
-// export { makeCounter };
+export { makeCounter };
 
 const counter1 = makeCounter();
 const counter2 = makeCounter();
