@@ -30,7 +30,7 @@ export function createLogger() {
                 return result.
                 sort((a, b) => b.dateTime - a.dateTime);
             } else {
-                return result.filter(i => i.type == type);
+                return result.filter(i => i.type == type).sort((a, b) => b.dateTime - a.dateTime);
             }
         },
     }
