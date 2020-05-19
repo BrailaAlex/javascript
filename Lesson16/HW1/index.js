@@ -1,17 +1,17 @@
 //factory of arrays
 
 export const createArrayOfFunctions = (num) => {
-    if (num == undefined) return arrOfFunctions;
+    let arr = [];
+    if (num == undefined) return arr;
 
     if (typeof num !== 'number')
         return null;
 
-    let arrOfFunctions = [];
     for (let i = 0; i < num; i++) {
-        // arrOfFunctions.push(el => i);
-        arrOfFunctions[i] = () => i
+        arr.push(el => i);
+        // arr[i] = () => i
     }
-    return arrOfFunctions;
-}
+    return arr;
+};
 
-console.log(createArrayOfFunctions(9)[5]());
+// console.log(createArrayOfFunctions(9)[5]());
