@@ -8,10 +8,10 @@ export const createArrayOfFunctions = (num) => {
         return null;
 
     for (let i = 0; i < num; i++) {
-        arr.push(el => i);
-        // arr[i] = () => i
+        // arr.push(el => i);
+        arr[i] = () => i;
     }
     return arr;
 };
 
-// console.log(createArrayOfFunctions(9)[5]());
+console.log(createArrayOfFunctions(9)[5]());
