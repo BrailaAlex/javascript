@@ -15,11 +15,10 @@ export let timer = {
         return (`${this.minsPassed}:${this.secondsPassed < 10 ? '0' + this.secondsPassed : this.secondsPassed}`)
     },
     stopTimer() {
-        this.clearInterval(this.timerID)
+        clearInterval(this.timerID)
     },
     resetTimer() {
         this.minsPassed = 0;
         this.secondsPassed = 0;
     }
-
 }
