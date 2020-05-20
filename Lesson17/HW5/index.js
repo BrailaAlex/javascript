@@ -5,16 +5,16 @@ export let timer = {
     startTimer() {
         this.timerID = setInterval(() => {
             this.secondsPassed += 1;
-            if (this.secondsPassed == 60) {
-                this.minsPassed++;
+            if (this.secondsPassed === 60) {
                 this.secondsPassed = 0;
+                this.minsPassed++;
             }
-        }, 1000)
+        }, 1000);
     },
     getTime() {
         return (`${this.minsPassed}:${this.secondsPassed < 10 ? '0' + this.secondsPassed : this.secondsPassed}`)
     },
-    clearInterval() {
+    stopTimer() {
         this.clearInterval(this.timerID)
     },
     resetTimer() {
