@@ -141,5 +141,6 @@ console.log(numbers.reduce((acc, el, index) => {
     console.log('STEP ' + index + 'acc is ' + acc)
     if (el % 2 === 0) acc.push(el);
     return acc;
+    // el % 2 === 0 ? acc.push(el) : return acc;
 }, []));
 console.log("after reduce2: " + res10);

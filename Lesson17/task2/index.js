@@ -1,6 +1,6 @@
 //callbackPrompt
 
-const callbackPrompt = {
+export const callbackPrompt = {
     message: 'Tell me your number',
     showPrompt() {
         // console.log(this);
