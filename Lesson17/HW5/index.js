@@ -2,7 +2,7 @@ export const timer = {
     secondsPassed: 0,
     minsPassed: 0,
     timerID: 0,
-    starttimer() {
+    startTimer() {
         this.timerID = setInterval(() => {
             this.secondsPassed += 1;
             if (this.secondsPassed == 60) {
