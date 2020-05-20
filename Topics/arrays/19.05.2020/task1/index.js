@@ -98,17 +98,48 @@ let callback = function(el) {
         return false;
     }
 }
-const filtered = squaredNumbers.filter(el => el % 2 === 0);
-
-console.log("before: " + squaredNumbers);
-console.log("after: " + filtered)
+const filtered = squaredNumbers.filter((el, index, array) => {
+    console.log(index);
+    console.log(array);
+    return el % 2 === 0;
+});
+console.log("before filter: " + squaredNumbers);
+console.log("after filter: " + filtered)
 
 
 /* метод find */
-/* const arrElement = arr.filter(callback) - вернет первый элемент массива arr, который удовлетворяет условию в callback. */
+/* const arrElement = arr.find(callback) - вернет первый элемент массива arr, который удовлетворяет условию в callback. */
 /* ф-ция callback запустится по очереди для каждого элемента начального массива arr */
-/* если callback(arr[i]) вернет true, то filter прекратит поиск и вернет этот элемент */
+/* если callback(arr[i]) вернет true, то find прекратит поиск и вернет этот элемент */
 
 // c помощью метода find найдите первое нечетное число в numbersList и выведите его в консоль
 
-// ... code here
+numbers = [1, 2, 3, 4, 5, 100, 40, 44, 55, 1234]
+
+const findOdd = numbers.find(el => el > 200);
+// const findOdd = numbers.filter(el => el % 2 !== 0); так лучше не писать
+
+console.log("before: " + numbers);
+console.log("after: " + findOdd)
+
+/* метод forEach*/
+
+let sum = 0;
+console.log(numbers.forEach(el => sum += el));
+console.log(sum);
+
+/* метод reduce*/
+console.log("before reduce: " + numbers);
+let res10 = numbers.reduce((acc, el, index) => {
+    console.log('STEP ' + index + 'acc is ' + acc)
+    return acc += el;
+}, 0);
+console.log("after reduce: " + res10);
+
+console.log("before reduce2: " + numbers);
+console.log(numbers.reduce((acc, el, index) => {
+    console.log('STEP ' + index + 'acc is ' + acc)
+    if (el % 2 === 0) acc.push(el);
+    return acc;
+}, []));
+console.log("after reduce2: " + res10);
