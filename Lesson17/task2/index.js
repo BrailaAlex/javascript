@@ -7,10 +7,10 @@ export const callbackPrompt = {
         const phoneNumber = prompt(this.message);
         console.log(phoneNumber);
     },
-    showDefferedPrompt(ms) {
+    showDeferredPrompt(ms) {
         // console.log(this);
         setTimeout(this.showPrompt.bind(this), ms)
-    },
+    }
 };
 
 callbackPrompt.showDefferedPrompt(1000);

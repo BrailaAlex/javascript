@@ -1,4 +1,4 @@
-export const callBackPrompt = {
+export const user = {
     firstName: 'John',
     lastName: 'Doe',
     getFullName() {
