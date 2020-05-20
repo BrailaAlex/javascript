@@ -13,4 +13,4 @@ export const callbackPrompt = {
     }
 };
 
-callbackPrompt.showDefferedPrompt(1000);
+// callbackPrompt.showDefferedPrompt(1000);
