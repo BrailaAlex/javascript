@@ -1,22 +1,19 @@
-export const saveCalls = func => {
+function saveCalls(func) {
 
-
-    function withMemory(this, ...args) {
-        withMemory.calls.push(...args)
-        return func.call(this, ...arguments);
+    function withMemory(...args) {
+        withMemory.calls.push(args);
+        return func.apply(this, arguments);
     }
-
     withMemory.calls = [];
-    return withMemory
+
+
+    return withMemory;
 };
 
-// const user = {
-//     name: 'Tom',
-//     sayHi() {
-//         console.log(`Hi, I'm ${this.name}!`)
-//     }
-// }
-
-// const userHi = user.sayHi;
-// const calledName = saveCalls(userHi);
-// calledName.call({ name: 'Bob' });
+function test(a, b) {
+    return Math.sqrt(a * a + b * b);
+};
+const testWithMemory = saveCalls(test);
+testWithMemory(4, 2);
+testWithMemory(9, 1);
+console.log(testWithMemory.calls);
