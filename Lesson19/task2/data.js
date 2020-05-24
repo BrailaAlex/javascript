@@ -39,7 +39,7 @@
 export function getOwnProps(obj) {
     let propArr = [];
     for (let prop in obj) {
-        if (ship.hasOwnProperty(prop)) {
+        if (obj.hasOwnProperty(prop)) {
             propArr.push(prop);
         }
     };
