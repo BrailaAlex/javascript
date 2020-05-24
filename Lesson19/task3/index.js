@@ -14,6 +14,7 @@ export function User(name, age) {
         if (newAge >= 25) {
             console.log(`New photo request was sent for ${this.name}`)
         }
+        return age;
     }
 }
 
