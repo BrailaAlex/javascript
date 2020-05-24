@@ -20,5 +20,5 @@ export function User(name, age) {
 const user1 = new User('Alex', 30);
 const user2 = new User('Bob', 32);
 user1.sayHi();
-user1.setAge(-1)
+user1.setAge(22)
 console.log(user1);
