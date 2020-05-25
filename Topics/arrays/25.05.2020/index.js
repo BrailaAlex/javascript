@@ -25,8 +25,8 @@ function multiply1(...numbers) {
 
 function multiply2() {
     let args = arguments;
-    let arr = new Array(...args); //creating new array with constructor 
-    console.log(arr);
+    // let arr = new Array(...args); //creating new array with constructor 
+    // console.log(arr);
 
     return [...args].reduce((acc, el) => acc * el);
 }
