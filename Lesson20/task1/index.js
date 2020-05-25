@@ -4,9 +4,7 @@ export class User {
         this.age = age;
     }
 
-    static createEmpty(name, age) { //sets static method for class which is hard to attribute to any
-        return new User('', null);
-    }
+
     sayHi() { //this way we are putting function to a prototype object
         console.log(`Hi, I am ${this.name}`)
     }
@@ -21,10 +19,14 @@ export class User {
         }
         return newAge;
     }
+
+    static createEmpty() { //sets static method for class which is hard to attribute to any
+        return new User('', null);
+    }
 }
 
 const user1 = new User('Alex', 30);
 const user2 = new User('Bob', 32);
 user1.sayHi();
 // user2.setAge(22);
-console.log(User.compare(user1, user2));
+console.log(User.createEmpty());
