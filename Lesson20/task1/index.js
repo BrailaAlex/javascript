@@ -8,14 +8,16 @@ export class User {
     sayHi() { //this way we are putting function to a prototype object
         console.log(`Hi, I am ${this.name}`)
     }
+
     requestNewPhoto() {
         console.log(`New photo request was sent for ${this.name}`)
     }
+
     setAge(newAge) {
         if (newAge < 0) return false;
         this.age = newAge;
         if (newAge >= 25) {
-            this.requestNewPhoto();
+            console.log(`New photo request was sent for ${this.name}`);
         }
         return newAge;
     }
