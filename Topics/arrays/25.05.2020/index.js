@@ -19,11 +19,11 @@
 //input: number, number, number...
 //output: number
 
-function multiply1(...numbers) {
-    return numbers.reduce((acc, el) => acc * el);
-}
+// function multiply1(...numbers) {
+//     return numbers.reduce((acc, el) => acc * el);
+// }
 
-function multiply2() {
+function multiply() {
     let args = arguments;
     // let arr = new Array(...args); //creating new array with constructor 
     // console.log(arr);
@@ -31,4 +31,4 @@ function multiply2() {
     return [...args].reduce((acc, el) => acc * el);
 }
 
-console.log(multiply2(123, 123, 123));
+// console.log(multiply2(123, 123, 123));
