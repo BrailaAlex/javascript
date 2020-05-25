@@ -1,25 +1,30 @@
-export function User(name, age) {
-    this.name = name;
-    this.age = age;
+// Wallet
 
-    User.prototype.sayHi = function() { //this way we are putting function to a prototype object
-        console.log(`Hi, I am ${this.name}`)
+export class Wallet {
+    _balance = 0;
+
+    getBalance() {
+        return this._balance;
     }
-    User.prototype.requestNewPhoto = function() {
-        console.log(`New photo request was sent for ${this.name}`)
+
+    deposit(amount) {
+        this._balance += amount;
     }
-    User.prototype.setAge = function(newAge) {
-        if (newAge < 0) return false;
-        this.age = newAge;
-        if (newAge >= 25) {
-            console.log(`New photo request was sent for ${this.name}`)
+
+    withdraw(amount) {
+        if (amount > this._balance) {
+            console.log('No enought funds');
+            return;
         }
-        return this.age;
+        this._balance -= amount;
     }
 }
 
-const user1 = new User('Alex', 30);
-const user2 = new User('Bob', 32);
-user1.sayHi();
-user1.setAge(22)
-console.log(user1);
+// const wallet1 = new Wallet;
+// wallet1.deposit(1250);
+// console.log(wallet1.getBalance());
+// wallet1.withdraw(1200);
+// console.log(wallet1.getBalance());
+// wallet1.withdraw(1200);
+// // console.log(wallet1.getBalance());
+// console.log(wallet1._balance);
