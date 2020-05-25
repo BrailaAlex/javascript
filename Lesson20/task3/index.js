@@ -1,28 +1,30 @@
 // Wallet
 
 export class Wallet {
-    _balance = 0;
+    constructor() {
+        this.balance = 0;
+    }
 
     getBalance() {
-        return this._balance;
+        return this.balance;
     }
 
     deposit(amount) {
-        this._balance += amount;
+        this.balance += amount;
     }
 
     withdraw(amount) {
-        if (amount > this._balance) {
+        if (amount > this.balance) {
             console.log('No enought funds');
             return;
         }
-        this._balance -= amount;
+        this.balance -= amount;
     }
 }
 
-const wallet1 = new Wallet;
-wallet1.deposit(1250);
-console.log(wallet1.getBalance());
-wallet1.withdraw(1200);
-console.log(wallet1.getBalance());
-wallet1.withdraw(1200);
+// const wallet1 = new Wallet;
+// wallet1.deposit(1250);
+// console.log(wallet1.getBalance());
+// wallet1.withdraw(1200);
+// console.log(wallet1.getBalance());
+// wallet1.withdraw(1200);
