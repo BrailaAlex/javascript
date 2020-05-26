@@ -37,3 +37,5 @@ class UserRepository {
         return findById === undefined ? [] : findById._name;
     };
 };
+
+export { User, UserRepository };
