@@ -5,13 +5,13 @@ class User {
         this._sessionId = sessionId.toString();
     };
     get id() {
-        return this._id;
+        return _id;
     }
     get name() {
-        return this._name;
+        return _name;
     }
     get sessionId() {
-        return this._sessionIdd;
+        return _sessionIdd;
     }
 };
 
