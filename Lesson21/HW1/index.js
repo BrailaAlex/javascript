@@ -10,7 +10,7 @@ const getInputElement = () => {
     return inputElem;
 };
 
-getTitleElement();
-getInputElement();
+// getTitleElement();
+// getInputElement();
 
 // export { getTitleElement, getInputElement };
