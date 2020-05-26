@@ -4,13 +4,13 @@ class User {
         this._name = name;
         this._sessionId = sessionId;
     };
-    get _id() {
+    get id() {
         return this._id;
     }
-    get _name() {
+    get name() {
         return this._name;
     }
-    get _sessionId() {
+    get sessionId() {
         return this._sessionIdd;
     }
 };
@@ -20,7 +20,7 @@ class UserRepository {
         this._users = Object.freeze(users);
     };
 
-    get _users() {
+    get users() {
         return this._users;
     }
 
