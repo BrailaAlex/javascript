@@ -11,7 +11,7 @@ export class User {
         return this._name;
     };
     get sessionId() {
-        return this._sessionIdd;
+        return this._sessionId;
     };
 };
 
