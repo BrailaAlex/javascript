@@ -6,13 +6,13 @@ class User {
     };
     get id() {
         return this._id;
-    }
+    };
     get name() {
         return this._name;
-    }
+    };
     get sessionId() {
         return this._sessionIdd;
-    }
+    };
 };
 
 class UserRepository {
