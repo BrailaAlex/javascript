@@ -1,8 +1,8 @@
 export class User {
     constructor(id, name, sessionId) {
-        this._id = `${id}`;
+        this._id = id;
         this._name = name;
-        this._sessionId = `${sessionId}`;
+        this._sessionId = sessionId;
     };
     get id() {
         return this._id;
