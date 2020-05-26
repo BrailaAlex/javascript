@@ -1,7 +1,7 @@
 export class User {
     constructor(id, name, sessionId) {
         this._id = `${id}`;
-        this._name = `${name}`;
+        this._name = name;
         this._sessionId = `${sessionId}`;
     };
     get id() {
@@ -40,4 +40,7 @@ export class UserRepository {
 
 
 const user1 = new User(2568, 'Alex', 25564);
-console.log(user1);
+const user2 = new User(2545, 'Den', 25586);
+const user3 = new User(2426, 'Ben', 25853);
+const users = [user1, user2, user3]
+console.log(users);
