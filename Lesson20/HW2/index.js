@@ -1,14 +1,14 @@
 class User {
-    constructor(name, age, sessionId) {
+    constructor(id, name, sessionId) {
         this._id = `${id}`;
-        this._name = `${id}`;
+        this._name = `${name}`;
         this._sessionId = `${sessionId}`;
     }
 };
 
 class UserRepository {
-    constructor(arr) {
-        this._users = Object.freeze(arr)
+    constructor(users) {
+        this._users = Object.freeze(users)
     }
     getUsersNames() {
         return this._users.map(obj => obj._name);
