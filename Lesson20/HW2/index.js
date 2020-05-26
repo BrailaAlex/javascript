@@ -8,12 +8,12 @@ class User {
 
 class UserRepository {
     constructor(users) {
-        this._users = Object.freeze(users)
+        this._users = Object.freeze(users);
     }
-    getUsersNames() {
+    getUserNames() {
         return this._users.map(obj => obj._name);
     }
-    getUsersIds() {
+    getUserIds() {
         return this._users.map(obj => obj._id);
     }
     getUserNameById(id) {
