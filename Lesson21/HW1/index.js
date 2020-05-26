@@ -1,15 +1,16 @@
 const getTitleElement = () => {
-    const titleElem = document.quarySelector('.title');
+    const titleElem = document.querySelector('.title');
     console.dir(titleElem);
     return titleElem;
-}
+};
+
 const getInputElement = () => {
-    const inputElem = document.quarySelector('text');
+    const inputElem = document.querySelector('text');
     console.dir(inputElem);
     return inputElem;
-}
+};
 
-// getTitleElement();
-// getInputElement();
+getTitleElement();
+getInputElement();
 
-export { getTitleElement, getInputElement };
+// export { getTitleElement, getInputElement };
