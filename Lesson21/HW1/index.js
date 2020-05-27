@@ -13,4 +13,4 @@ const getInputElement = () => {
 getTitleElement();
 getInputElement();
 
-// export { getTitleElement, getInputElement };
+export { getTitleElement, getInputElement };
