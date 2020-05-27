@@ -1,5 +1,5 @@
 const setButton = buttonText => {
-        return document.querySelector('body').innerHtml = `<button> ${buttonText} </button>`;
+        return document.querySelector('body').innerHTML = `<button> ${buttonText} </button>`;
     }
     // setButton("dfvtf");
 export default setButton;
