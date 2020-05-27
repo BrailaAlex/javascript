@@ -6,11 +6,11 @@ const manageClasses = () => {
     const threeElem = document.querySelector('.three');
     threeElem.classList.toggle('three_done');
     const fourElem = document.querySelector('.four');
-    if (fourElem.classList.containes('some-class')) {
+    if (fourElem.classList.contains('some-class')) {
         fourElem.classList.add('another-class');
     };
 };
 
-// manageClasses();
+manageClasses();
 
 export { manageClasses };
