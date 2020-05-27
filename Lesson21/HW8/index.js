@@ -14,5 +14,5 @@ const finishList = () => {
     specLi.before(liElemFourth);
     specLi.after(liElemSixth);
 };
-finishList();
+// finishList();
 export { finishList };
