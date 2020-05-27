@@ -11,6 +11,6 @@ const manageClasses = text => {
     };
 };
 
-manageClasses();
+// manageClasses();
 
 export { manageClasses };
