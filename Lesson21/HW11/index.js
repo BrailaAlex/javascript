@@ -1,5 +1,9 @@
-const setTitle = text => {
-    return document.querySelector('.title').textContent = `${text}`;
-};
+const squaredNumbers = () => {
+    const liElems = document.querySelectorAll('.number');
+    console.log([...liElems].map(elem => elem.dataset.number));
+    return [...liElems].map((elem, index) => elem.dataset.squaredNumber = [...liElems]
+        .map(elem => elem.dataset.number)[index] ** 2);
+}
 
-export { setTitle };
+// squaredNumbers();
+export { squaredNumbers };
