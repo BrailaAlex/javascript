@@ -9,6 +9,7 @@ const manageClasses = () => {
     if (fourElem.classList.contains('some-class')) {
         fourElem.classList.add('another-class');
     };
+    return;
 };
 
 manageClasses();
