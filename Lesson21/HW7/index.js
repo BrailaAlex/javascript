@@ -1,7 +1,8 @@
 const createButton = buttonText => {
     const buttonElem = document.createElement('button');
     buttonElem.textContent = `${buttonText}`;
-    return document.querySelector('body').append(buttonElem);
+    const bodyElem = document.querySelector('body');
+    return bodyElem.append(buttonElem);
 };
 createButton('Send Email');
 
