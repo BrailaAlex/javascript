@@ -96,14 +96,13 @@ attatchBtn.addEventListener('click', pushAttatch);
 
 
 const removeEventList = () => {
-    divElem.removeEventListener('click', logGreenDiv, true);
-    divElem.removeEventListener('click', logGreyDiv);
+    divElem.removeEventListener('click', logGreyDiv, true);
+    pElem.removeEventListener('click', logGreyP, true);
+    spanElem.removeEventListener('click', logGreySpan, true);
 
-    pElem.removeEventListener('click', logGreenP, true);
-    pElem.removeEventListener('click', logGreyP);
-
-    spanElem.removeEventListener('click', logGreenSpan, true);
-    spanElem.removeEventListener('click', logGreySpan);
+    spanElem.removeEventListener('click', logGreenSpan);
+    pElem.removeEventListener('click', logGreenP);
+    divElem.removeEventListener('click', logGreenDiv);
 };
 const pushRemove = removeEventList;
 removeBtn.addEventListener('click', pushRemove);
