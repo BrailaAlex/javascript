@@ -41,7 +41,7 @@ renderListItems(tasks);
 
 const checkIfDone = (event) => {
     const checkedElem = event.target;
-    // if (checkedElem.tagName !== 'input') return;
+    if (checkedElem.tagName != 'INPUT') return;
 
     const getId = tasks.find(elem => elem.id === +checkedElem.parentElement.dataset.id);
     getId.done = checkedElem.checked;
