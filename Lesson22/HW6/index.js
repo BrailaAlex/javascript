@@ -1,5 +1,5 @@
 const btns = document.querySelectorAll('.btn');
-console.log(btns);
+// console.log(btns);
 const handleclick = () => {
     console.log(event.target.textContent);
 }
