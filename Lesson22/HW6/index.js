@@ -1,5 +1,5 @@
 const btns = document.querySelectorAll('.btn');
-const handleclick = () => {
+const handleClick = () => {
         console.log(event.target.textContent);
     }
     [...btns].map(el => el.addEventListener('click', handleclick));
