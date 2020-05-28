@@ -7,7 +7,7 @@ const tasks = [
 ];
 
 const listElem = document.querySelector('.list');
-const btnElem = document.querySelector('.btn');
+const crtBtnElem = document.querySelector('.create-task-btn');
 const inputElem = document.querySelector('.task-input');
 
 
@@ -33,14 +33,13 @@ const renderListItems = listItems => {
 
             return listItemElem;
         });
-    console.log(tasks);
     listElem.append(...listItemsElems);
 
 };
 
 renderListItems(tasks);
 
-const checkDoneWork = (event) => {
+const checkIfDone = (event) => {
     const checkedElem = event.target;
     // if (checkedElem.tagName !== 'input') return;
 
@@ -51,7 +50,7 @@ const checkDoneWork = (event) => {
     renderListItems(tasks);
 };
 
-listElem.addEventListener('click', checkDoneWork);
+listElem.addEventListener('click', checkIfDone);
 
 
 const creatTask = () => {
@@ -69,4 +68,4 @@ const creatTask = () => {
     renderListItems(tasks);
 };
 
-btnElem.addEventListener('click', creatTask);
+crtBtnElem.addEventListener('click', creatTask);
