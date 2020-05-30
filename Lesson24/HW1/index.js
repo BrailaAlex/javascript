@@ -10,6 +10,6 @@ export const getDiff = (startDate, endDate) => {
     return `${daysDiff}d ${hoursDiff}h ${minutesDiff}m ${secondsDiff}s`
 }
 
-// startDate = new Date(2019, 11, 3, 12, 20, 30);
-// endDate = new Date(2019, 11, 7, 11, 40, 23);
-// console.log(getDiff(startDate, endDate));
+startDate = new Date(2019, 11, 3, 12, 20, 30);
+endDate = new Date(2019, 11, 7, 11, 40, 23);
+console.log(getDiff(startDate, endDate));
