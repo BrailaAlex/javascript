@@ -1,11 +1,32 @@
-const weekDays = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const students = [
+    { name: 'Tom', birthDate: '01/15/2010' },
+    { name: 'Ben', birthDate: '02/21/2010' },
+    { name: 'Sam', birthDate: '01/16/2010' },
+    { name: 'Ann', birthDate: '03/12/2010' },
+    { name: 'Lilly', birthDate: '02/09/2010' },
+    { name: 'John', birthDate: '01/02/2010' },
+];
 
-export const dayOfWeek = (date, days) => {
-        const day = new Date(date).getDate(); // getting date (from 1 to 31) by getDate
-        const dateInFuture = new Date(date).setDate(day + days); //here we will get a string of numbers which are miliseconds from 01.01.1970 03:00
-        return weekDays[new Date(dateInFuture).getDay()]; // with method getDay we will receave a number of a day in a week from 0 to 6
+const studentBirthDays = students => {
+        const result = {}
+        sortedStudents = [...students].sort((a, b) => new Date(a.birthDate)
+            .getTime() - new Date(b.birthDate).getTime())
+        months.map(mon => {
+            result[mon] = [];
+        })
+
+        sortedStudents.map(student => {
+            const month = months[new Date(student.birthDate).getMonth()]
+            result[month].push(student.name)
+        })
+
+        Object.entries(result).map(el => {
+            if (el[1].length === 0)
+                delete result[el[0]];
+        });
+        return result;
     }
-    // const result = dayOfWeek(new Date(2019, 0, 1), 12);
-    // console.log(result);
+    // console.log(studentBirthDays(students));
 
-// console.log(weekDays[result]);
+export { studentBirthDays };
