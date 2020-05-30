@@ -1,4 +1,4 @@
-const getDiff = (startDate, endDate) => {
+export const getDiff = (startDate, endDate) => {
     msInDay = 1000 * 3600 * 24;
     msInHour = 1000 * 3600;
     msInMinute = 60000;
@@ -10,6 +10,6 @@ const getDiff = (startDate, endDate) => {
     return `${daysDiff}d ${hoursDiff}h ${minutesDiff}m ${secondsDiff}s`
 }
 
-startDate = new Date(2019, 11, 3, 12, 20, 30);
-endDate = new Date(2019, 11, 7, 11, 40, 23);
-console.log(getDiff(startDate, endDate));
+// startDate = new Date(2019, 11, 3, 12, 20, 30);
+// endDate = new Date(2019, 11, 7, 11, 40, 23);
+// console.log(getDiff(startDate, endDate));
