@@ -8,18 +8,19 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', '
 //     { name: 'John', birthDate: '01/02/2010' },
 // ];
 
-const studentsBirthDays = students => {
-        const result = {}
+export const studentsBirthDays = students => {
+        let result = {}
         sortedStudents = [...students].sort((a, b) => new Date(a.birthDate)
-            .getTime() - new Date(b.birthDate).getTime())
+            .getTime() - new Date(b.birthDate).getTime());
+
         months.map(mon => {
             result[mon] = [];
-        })
+        });
 
         sortedStudents.map(student => {
             const month = months[new Date(student.birthDate).getMonth()]
             result[month].push(student.name)
-        })
+        });
 
         Object.entries(result).map(el => {
             if (el[1].length === 0)
@@ -28,5 +29,3 @@ const studentsBirthDays = students => {
         return result;
     }
     // console.log(studentBirthDays(students));
-
-export { studentsBirthDays };
