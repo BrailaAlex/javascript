@@ -1,15 +1,21 @@
-export const getDiff = (startDate, endDate) => {
-    msInDay = 1000 * 3600 * 24;
-    msInHour = 1000 * 3600;
-    msInMinute = 60000;
-    diffInMs = Math.abs(endDate.getTime() - startDate.getTime())
-    const daysDiff = Math.trunc(diffInMs / msInDay);
-    const hoursDiff = Math.trunc((diffInMs % msInDay) / msInHour);
-    const minutesDiff = Math.trunc((diffInMs % msInDay) % msInHour / msInMinute);
-    const secondsDiff = Math.trunc((diffInMs % msInDay) % msInHour % msInMinute / 1000);
-    return `${daysDiff}d ${hoursDiff}h ${minutesDiff}m ${secondsDiff}s`
+const millSecPerMinute = 60 * 1000;
+const millSecPerHour = 60 * millSecPerMinute;
+const millSecPerDay = 24 * millSecPerHour;
+
+function getDiff(startDate, endDate) {
+    const diffMs = Math.abs(endDate - startDate);
+    const countDays = Math.trunc(diffMs / millSecPerDay);
+    const countDaysInMs = countDays * millSecPerDay;
+
+    const restOfDayInMs = diffMs - countDaysInMs;
+
+    const countHours = Math.trunc((restOfDayInMs) / millSecPerHour);
+    const restOfHourInMs = restOfDayInMs - (countHours * millSecPerHour);
+
+    const countMinutes = Math.trunc((restOfHourInMs) / millSecPerMinute);
+    const countSeconds = Math.trunc((restOfHourInMs - (countMinutes * millSecPerMinute)) / 1000);
+
+    return `${countDays}d ${countHours}h ${countMinutes}m ${countSeconds}s`;
 }
 
-startDate = new Date(2019, 11, 3, 12, 20, 30);
-endDate = new Date(2019, 11, 7, 11, 40, 23);
-console.log(getDiff(startDate, endDate));
+export { getDiff };
