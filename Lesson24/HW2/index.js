@@ -29,4 +29,4 @@ const studentsBirthDays = students => {
     }
     // console.log(studentBirthDays(students));
 
-export { studentBirthDays };
+export { studentsBirthDays };
