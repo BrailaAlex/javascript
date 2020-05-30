@@ -6,6 +6,6 @@ export const getDiff = (startDate, endDate) => {
     return `${daysDiff}d ${hoursDiff}h ${minutesDiff}m ${secondsDiff}s`
 }
 
-startDate = new Date(2156185181);
-endDate = new Date(2162185181);
-console.log(getDiff(startDate, endDate));
+// startDate = new Date(2156185181);
+// endDate = new Date(2162185181);
+// console.log(getDiff(startDate, endDate));
