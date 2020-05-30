@@ -8,7 +8,7 @@ const students = [
     { name: 'John', birthDate: '01/02/2010' },
 ];
 
-const studentBirthDays = students => {
+const studentsBirthDays = students => {
         const result = {}
         sortedStudents = [...students].sort((a, b) => new Date(a.birthDate)
             .getTime() - new Date(b.birthDate).getTime())
