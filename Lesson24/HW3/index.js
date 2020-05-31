@@ -41,7 +41,6 @@ const inputElem = document.querySelector('.task-input');
 
 const renderListItems = listItems => {
     const listElem = document.querySelector('.list');
-    s
     const listItemsElems = listItems
         .sort((a, b) => b.createDate - a.createDate)
         .sort((a, b) => a.done - b.done)
