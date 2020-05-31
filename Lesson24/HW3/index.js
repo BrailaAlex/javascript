@@ -35,7 +35,7 @@ const tasks = [{
     },
 ];
 const listElem = document.querySelector('.list');
-const crtBtnElem = document.querySelector('.create-task-btn');
+const btnElem = document.querySelector('.btn');
 const inputElem = document.querySelector('.task-input');
 
 
@@ -43,14 +43,13 @@ const renderListItems = listItems => {
     const listElem = document.querySelector('.list');
 
     const listItemsElems = listItems
-        .sort((a, b) => b.createDate - a.createDate)
+        .sort((a, b) => b.date - a.date)
         .sort((a, b) => a.done - b.done)
-        .sort((a, b) => b.doneDate - a.doneDate)
-        .map(({ text, done, id }) => {
+        .sort((a, b) => b.dateСompleted - a.dateСompleted).map(({ text, done, id }) => {
 
             const listItemElem = document.createElement('li');
             listItemElem.classList.add('list__item');
-            listItemElem.dataset.id = `${id}`;
+            listItemElem.setAttribute('id', `${id}`);
 
             const checkboxItem = document.createElement('input');
             checkboxItem.setAttribute('type', 'checkbox');
@@ -59,46 +58,50 @@ const renderListItems = listItems => {
                 listItemElem.classList.add('list__item_done');
             }
             checkboxItem.classList.add('list__item-checkbox');
+
+
             listItemElem.append(checkboxItem, text);
 
             return listItemElem;
         });
+
     listElem.append(...listItemsElems);
 
 };
 
-renderListItems(tasks);
+renderListItems(todos);
 
-const checkIfDone = (event) => {
-    const checkedElem = event.target;
-    if (checkedElem.tagName != 'INPUT') return;
+const checkDoneWork = (event) => {
+    const checkTarget = event.target;
+    if (checkTarget.tagName != 'INPUT') return;
 
-    const getId = tasks.find(elem => elem.id === +checkedElem.parentElement.dataset.id);
-    getId.done = checkedElem.checked;
-    getId.doneDate = getId.done ? new Date() : undefined;
+    const getId = todos.find(elem => elem.id === +checkTarget.parentElement.id);
+    getId.done = checkTarget.checked;
+    getId.dateСompleted = getId.done ? new Date() : undefined;
+
 
     listElem.innerHTML = '';
-    renderListItems(tasks);
+    renderListItems(todos);
 };
 
-listElem.addEventListener('click', checkIfDone);
+listElem.addEventListener('click', checkDoneWork);
 
 
-const creatTask = () => {
+const creatNewWork = () => {
     if (inputElem.value == '') return;
 
-    tasks.push({
-        id: tasks.length + 1,
+    todos.unshift({
+        id: todos.length + 1,
         text: inputElem.value,
         done: false,
-        createDate: new Date(),
-        checkDate: undefined,
+        date: new Date(),
+        dateCompleted: undefined,
     });
 
     inputElem.value = '';
 
     listElem.innerHTML = '';
-    renderListItems(tasks);
+    renderListItems(todos);
 };
 
-crtBtnElem.addEventListener('click', creatTask);
+btnElem.addEventListener('click', creatNewWork);
