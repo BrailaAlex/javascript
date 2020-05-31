@@ -3,35 +3,35 @@ const tasks = [{
         done: false,
         id: 1,
         createDate: new Date(2015, 9, 1, 0, 0, 0, 0),
-        checkDate: undefined,
+        doneDate: undefined,
     },
     {
         text: 'Pick up Tom from airport',
         done: false,
         id: 2,
         createDate: new Date(2016, 9, 1, 0, 0, 0, 0),
-        checkDate: undefined,
+        doneDate: undefined,
     },
     {
         text: 'Visit party',
         done: false,
         id: 3,
         createDate: new Date(2016, 9, 1, 0, 0, 0, 0),
-        checkDate: undefined,
+        doneDate: undefined,
     },
     {
         text: 'Visit doctor',
         done: true,
         id: 4,
         createDate: new Date(2016, 9, 1, 0, 0, 0, 0),
-        checkDate: new Date(2017, 5, 3),
+        doneDate: new Date(2017, 5, 3),
     },
     {
         text: 'Buy meat',
         done: true,
         id: 5,
         createDate: new Date(2018, 9, 1, 0, 0, 0, 0),
-        checkDate: new Date(2019, 6, 4),
+        doneDate: new Date(2019, 6, 4),
     },
 ];
 const listElem = document.querySelector('.list');
@@ -45,7 +45,7 @@ const renderListItems = listItems => {
     const listItemsElems = listItems
         .sort((a, b) => b.createDate - a.createDate)
         .sort((a, b) => a.done - b.done)
-        .sort((a, b) => b.checkDate - a.checkDate)
+        .sort((a, b) => b.doneDate - a.doneDate)
         .map(({ text, done, id }) => {
 
             const listItemElem = document.createElement('li');
@@ -75,7 +75,7 @@ const checkIfDone = (event) => {
 
     const getId = tasks.find(elem => elem.id === +checkedElem.parentElement.dataset.id);
     getId.done = checkedElem.checked;
-    getId.checkDate = getId.done ? new Date() : undefined;
+    getId.doneDate = getId.done ? new Date() : undefined;
 
     listElem.innerHTML = '';
     renderListItems(tasks);
@@ -91,8 +91,8 @@ const creatTask = () => {
         id: tasks.length + 1,
         text: inputElem.value,
         done: false,
-        checkDate: undefined,
         createDate: new Date(),
+        checkDate: undefined,
     });
 
     inputElem.value = '';
