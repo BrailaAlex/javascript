@@ -38,7 +38,7 @@ const studentsBirthDays = students =>
                 [month]: [...[student.name]]
             }
         };
-        return acc;
+        console.log(acc[month]);
     }, {})
 
 // return result;
