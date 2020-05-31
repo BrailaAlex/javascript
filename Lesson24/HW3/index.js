@@ -1,11 +1,101 @@
-const weekDays = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+const tasks = [{
+        text: 'Buy milk',
+        done: false,
+        id: 1,
+        createDate: new Date(2020, 02, 15, 15, 15, 15)
+    },
+    {
+        text: 'Pick up Tom from airport',
+        done: false,
+        id: 2,
+        createDate: new Date(2020, 02, 15, 15, 15, 15)
+    },
+    {
+        text: 'Visit party',
+        done: false,
+        id: 3,
+        createDate: new Date(2020, 02, 15, 15, 15, 15)
+    },
+    {
+        text: 'Visit doctor',
+        done: true,
+        checkDate: new Date(2020, 05, 17, 15, 15, 15),
+        id: 4,
+        createDate: new Date(2020, 02, 15, 15, 15, 15)
+    },
+    {
+        text: 'Buy meat',
+        done: true,
+        checkDate: new Date(2020, 05, 15, 15, 15, 15),
+        id: 5,
+        createDate: new Date(2020, 02, 15, 15, 15, 15)
+    },
+];
 
-export const dayOfWeek = (date, days) => {
-        const day = new Date(date).getDate(); // getting date (from 1 to 31) by getDate
-        const dateInFuture = new Date(date).setDate(day + days); //here we will get a string of numbers which are miliseconds from 01.01.1970 03:00
-        return weekDays[new Date(dateInFuture).getDay()]; // with method getDay we will receave a number of a day in a week from 0 to 6
-    }
-    // const result = dayOfWeek(new Date(2019, 0, 1), 12);
-    // console.log(result);
+const listElem = document.querySelector('.list');
+const crtBtnElem = document.querySelector('.create-task-btn');
+const inputElem = document.querySelector('.task-input');
 
-// console.log(weekDays[result]);
+
+const renderListItems = listItems => {
+    const listElem = document.querySelector('.list');
+
+    const listItemsElems = listItems
+        .sort((a, b) => b.createDate - a.createDate)
+        .sort((a, b) => b.checkDate - a.checkDate)
+        .sort((a, b) => a.done - b.done)
+        .map(({ text, done, id }) => {
+
+            const listItemElem = document.createElement('li');
+            listItemElem.classList.add('list__item');
+            listItemElem.dataset.id = `${id}`;
+
+            const checkboxItem = document.createElement('input');
+            checkboxItem.setAttribute('type', 'checkbox');
+            checkboxItem.checked = done;
+            if (done) {
+                listItemElem.classList.add('list__item_done');
+            }
+            checkboxItem.classList.add('list__item-checkbox');
+            listItemElem.append(checkboxItem, text);
+
+            return listItemElem;
+        });
+    listElem.append(...listItemsElems);
+
+};
+
+renderListItems(tasks);
+
+const checkIfDone = (event) => {
+    const checkedElem = event.target;
+    if (checkedElem.tagName != 'INPUT') return;
+
+    const getId = tasks.find(elem => elem.id === +checkedElem.parentElement.dataset.id);
+    getId.done = checkedElem.checked;
+    getId.checkDate = new Date()
+
+    listElem.innerHTML = '';
+    renderListItems(tasks);
+};
+
+listElem.addEventListener('click', checkIfDone);
+
+
+const creatTask = () => {
+    if (inputElem.value == '') return;
+
+    tasks.push({
+        id: tasks.length + 1,
+        text: inputElem.value,
+        done: false,
+        createDate: new Date(),
+    });
+
+    inputElem.value = '';
+
+    listElem.innerHTML = '';
+    renderListItems(tasks);
+};
+
+crtBtnElem.addEventListener('click', creatTask);
