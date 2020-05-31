@@ -2,33 +2,36 @@ const tasks = [{
         text: 'Buy milk',
         done: false,
         id: 1,
-        createDate: new Date(2020, 02, 15, 15, 15, 15)
+        createDate: new Date(2020, 02, 15, 15, 15, 15),
+        checkDate: undefined,
     },
     {
         text: 'Pick up Tom from airport',
         done: false,
         id: 2,
-        createDate: new Date(2020, 02, 15, 15, 15, 15)
+        createDate: new Date(2020, 02, 15, 15, 15, 15),
+        checkDate: undefined,
     },
     {
         text: 'Visit party',
         done: false,
         id: 3,
-        createDate: new Date(2020, 02, 15, 15, 15, 15)
+        createDate: new Date(2020, 02, 15, 15, 15, 15),
+        checkDate: undefined,
     },
     {
         text: 'Visit doctor',
         done: true,
-        checkDate: new Date(2020, 05, 17, 15, 15, 15),
         id: 4,
-        createDate: new Date(2020, 02, 15, 15, 15, 15)
+        createDate: new Date(2020, 02, 15, 15, 15, 15),
+        checkDate: new Date(2020, 05, 17, 15, 15, 15),
     },
     {
         text: 'Buy meat',
         done: true,
-        checkDate: new Date(2020, 05, 15, 15, 15, 15),
         id: 5,
-        createDate: new Date(2020, 02, 15, 15, 15, 15)
+        createDate: new Date(2020, 02, 15, 15, 15, 15),
+        checkDate: new Date(2020, 05, 15, 15, 15, 15),
     },
 ];
 
@@ -73,7 +76,7 @@ const checkIfDone = (event) => {
 
     const getId = tasks.find(elem => elem.id === +checkedElem.parentElement.dataset.id);
     getId.done = checkedElem.checked;
-    getId.checkDate = new Date()
+    getId.checkDate = getId.done ? new Date() : undefined;
 
     listElem.innerHTML = '';
     renderListItems(tasks);
@@ -89,6 +92,7 @@ const creatTask = () => {
         id: tasks.length + 1,
         text: inputElem.value,
         done: false,
+        checkDate: undefined,
         createDate: new Date(),
     });
 
