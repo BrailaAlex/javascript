@@ -43,8 +43,8 @@ const renderListItems = listItems => {
     const listElem = document.querySelector('.list');
     const listItemsElems = listItems
         .sort((a, b) => b.createDate - a.createDate)
-        .sort((a, b) => b.doneDate - a.doneDate)
         .sort((a, b) => a.done - b.done)
+        .sort((a, b) => b.doneDate - a.doneDate)
         .map(({ text, done, id }) => {
 
             const listItemElem = document.createElement('li');
@@ -74,7 +74,7 @@ const checkIfDone = (event) => {
 
     const getId = tasks.find(elem => elem.id === +checkedElem.parentElement.dataset.id);
     getId.done = checkedElem.checked;
-    getId.doneDate = new Date();
+    getId.doneDate = getId.done ? new Date() : undefined;
 
     listElem.innerHTML = '';
     renderListItems(tasks);
