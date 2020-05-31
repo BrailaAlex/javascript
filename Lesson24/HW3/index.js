@@ -2,39 +2,38 @@ const tasks = [{
         text: 'Buy milk',
         done: false,
         id: 1,
-        createDate: new Date(2020, 02, 15, 15, 15, 15),
+        createDate: new Date(2015, 9, 1, 0, 0, 0, 0),
         checkDate: undefined,
     },
     {
         text: 'Pick up Tom from airport',
         done: false,
         id: 2,
-        createDate: new Date(2020, 02, 15, 15, 15, 15),
+        createDate: new Date(2016, 9, 1, 0, 0, 0, 0),
         checkDate: undefined,
     },
     {
         text: 'Visit party',
         done: false,
         id: 3,
-        createDate: new Date(2020, 02, 15, 15, 15, 15),
+        createDate: new Date(2016, 9, 1, 0, 0, 0, 0),
         checkDate: undefined,
     },
     {
         text: 'Visit doctor',
         done: true,
         id: 4,
-        createDate: new Date(2020, 02, 15, 15, 15, 15),
-        checkDate: new Date(2020, 05, 17, 15, 15, 15),
+        createDate: new Date(2016, 9, 1, 0, 0, 0, 0),
+        checkDate: new Date(2017, 5, 3),
     },
     {
         text: 'Buy meat',
         done: true,
         id: 5,
-        createDate: new Date(2020, 02, 15, 15, 15, 15),
-        checkDate: new Date(2020, 05, 15, 15, 15, 15),
+        createDate: new Date(2018, 9, 1, 0, 0, 0, 0),
+        checkDate: new Date(2019, 6, 4),
     },
 ];
-
 const listElem = document.querySelector('.list');
 const crtBtnElem = document.querySelector('.create-task-btn');
 const inputElem = document.querySelector('.task-input');
@@ -45,8 +44,8 @@ const renderListItems = listItems => {
 
     const listItemsElems = listItems
         .sort((a, b) => b.createDate - a.createDate)
-        .sort((a, b) => b.checkDate - a.checkDate)
         .sort((a, b) => a.done - b.done)
+        .sort((a, b) => b.checkDate - a.checkDate)
         .map(({ text, done, id }) => {
 
             const listItemElem = document.createElement('li');
