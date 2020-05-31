@@ -1,4 +1,4 @@
-const tasks = [{
+const todos = [{
         text: 'Buy milk',
         done: false,
         id: 1,
