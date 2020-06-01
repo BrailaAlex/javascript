@@ -53,6 +53,7 @@ const renderListItems = listItems => {
         // })
         .sort((a, b) => a.done - b.done)
         .sort((a, b) => {
+            if (a.done - b.done !== 0) return a.done - b.done;
             if (a.done && b.done)
                 return (new Date(b.doneDate) - new Date(a.doneDate));
             if (!a.done && !b.done)
