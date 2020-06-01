@@ -42,6 +42,7 @@ const inputElem = document.querySelector('.task-input');
 const renderListItems = listItems => {
     const listElem = document.querySelector('.list');
     const listItemsElems = listItems
+        .sort((a, b) => a.done - b.done)
         .sort((a, b) => {
             if (a.done && b.done)
                 b.doneDate - a.doneDate
@@ -50,7 +51,6 @@ const renderListItems = listItems => {
             if (!a.done && !b.done)
                 return (b.createDate - a.createDate)
         })
-        .sort((a, b) => a.done - b.done)
         .map(({ text, done, id }) => {
 
             const listItemElem = document.createElement('li');
