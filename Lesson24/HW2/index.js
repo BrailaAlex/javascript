@@ -9,43 +9,44 @@ const students = [
 ];
 
 const studentsBirthDays = students =>
+    students.sort((a, b) => new Date(a.birthDate)
+        .getTime() - new Date(b.birthDate).getTime())
+    .reduce((acc, student) => {
+        const month = months[new Date(student.birthDate).getMonth()]
+        return {...acc,
+            ... {
+                [month]: [...acc[month], student.name]
+            }
+        };
+    }, {
+        Jan: [],
+        Feb: [],
+        Mar: [],
+    })
     // {
     // let result = {}
     // months.map(mon => {
     //     result[mon] = [];
     // });
 
-    // students.sort((a, b) => new Date(a.birthDate)
-    //     .getTime() - new Date(b.birthDate).getTime())
-    //     .map(student => {
-    //     const month = months[new Date(student.birthDate).getMonth()]
-    //     result[month].push(student.name)
-    // });
+// students.sort((a, b) => new Date(a.birthDate)
+//     .getTime() - new Date(b.birthDate).getTime())
+//     .map(student => {
+//     const month = months[new Date(student.birthDate).getMonth()]
+//     result[month].push(student.name)
+// });
 
-    // Object.keys(result).map(el => {
-    //     if (result[el].length === 0)
-    //         delete result[el];
-    // });
-    students.sort((a, b) => new Date(a.birthDate)
-        .getTime() - new Date(b.birthDate).getTime())
-    .reduce((acc, student) => {
-        console.log(acc);
-        const month = months[new Date(student.birthDate).getMonth()]
-        console.log(month);
-        console.log(student.name);
-        acc = {...acc,
-            ... {
-                [month]: [...[student.name]]
-            }
-        };
-        console.log(acc[month]);
-    }, {})
+// Object.keys(result).map(el => {
+//     if (result[el].length === 0)
+//         delete result[el];
+// });
+
 
 // return result;
 // }
 
 
 // export { studentsBirthDays };
-studentsBirthDays(students)
-    // console.log(studentsBirthDays(students));
-    // console.log(students);
+console.log(studentsBirthDays(students));
+// console.log(studentsBirthDays(students));
+// console.log(students);
