@@ -42,9 +42,15 @@ const inputElem = document.querySelector('.task-input');
 const renderListItems = listItems => {
     const listElem = document.querySelector('.list');
     const listItemsElems = listItems
-        .sort((a, b) => b.createDate - a.createDate)
         .sort((a, b) => a.done - b.done)
-        .sort((a, b) => b.doneDate - a.doneDate)
+        .sort((a, b) => {
+            if (!a.done && !b.done)
+                return (b.createDate - a.createDate)
+        })
+        .sort((a, b) => {
+            if (a.done && b.done)
+                b.doneDate - a.doneDate
+        })
         .map(({ text, done, id }) => {
 
             const listItemElem = document.createElement('li');
