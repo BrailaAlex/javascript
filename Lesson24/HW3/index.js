@@ -55,12 +55,8 @@ const renderListItems = listItems => {
         .sort((a, b) => {
             if (a.done && b.done)
                 return (new Date(b.doneDate) - new Date(a.doneDate));
-            return;
-        })
-        .sort((a, b) => {
             if (!a.done && !b.done)
                 return (new Date(b.createDate) - new Date(a.createDate));
-            return;
         })
         .map(({ text, done, id }) => {
 
