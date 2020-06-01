@@ -42,24 +42,26 @@ const inputElem = document.querySelector('.task-input');
 const renderListItems = listItems => {
     const listElem = document.querySelector('.list');
     const listItemsElems = listItems
+        // .sort((a, b) => {
+        //     if (a.done - b.done !== 0) {
+        //         return a.done - b.done;
+        //     };
+        //     if (a.done) {
+        //         return new Date(b.finishDate) - new Date(a.finishDate);
+        //     }
+        //     return new Date(b.createDate) - new Date(a.createDate);
+        // })
+        .sort((a, b) => a.done - b.done)
         .sort((a, b) => {
-            if (a.done - b.done !== 0) {
-                return a.done - b.done;
-            };
-            if (a.done) {
-                return new Date(b.finishDate) - new Date(a.finishDate);
-            }
-            return new Date(b.createDate) - new Date(a.createDate);
+            if (a.done && b.done)
+                return (new Date(b.doneDate) - new Date(a.doneDate));
+            return;
         })
-        // .sort((a, b) => a.done - b.done)
-        // .sort((a, b) => {
-        //     if (a.done && b.done)
-        //         return (new Date(b.doneDate) - new Date(a.doneDate));
-        // })
-        // .sort((a, b) => {
-        //     if (!a.done && !b.done)
-        //         return (new Date(b.createDate) - new Date(a.createDate));
-        // })
+        .sort((a, b) => {
+            if (!a.done && !b.done)
+                return (new Date(b.createDate) - new Date(a.createDate));
+            return;
+        })
         .map(({ text, done, id }) => {
 
             const listItemElem = document.createElement('li');
