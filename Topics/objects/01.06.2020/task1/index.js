@@ -16,14 +16,14 @@ const users = [
     { id: '4', name: 'Ann' },
 ]
 
-const markAdmins = (users, adminsIds) => {
+const markAdmins1 = (users, adminsIds) => {
     return users.map(user => {
         let isAdmin = adminsIds.includes(user.id); //return Boolean quality
         return {...user, isAdmin };
     });
 }
 
-const markAdmins1 = (users, adminsIds) => users
+const markAdmins = (users, adminsIds) => users
     .map(user => ({...user, isAdmin: adminsIds.includes(user.id) }));
 
-console.log(markAdmins1(users, adminsIds));
+console.log(markAdmins(users, adminsIds));
