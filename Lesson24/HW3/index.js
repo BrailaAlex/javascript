@@ -45,11 +45,11 @@ const renderListItems = listItems => {
         .sort((a, b) => a.done - b.done)
         .sort((a, b) => {
             if (a.done && b.done)
-                b.doneDate - a.doneDate
+                return (b.doneDate - a.doneDate);
         })
         .sort((a, b) => {
             if (!a.done && !b.done)
-                return (b.createDate - a.createDate)
+                return (b.createDate - a.createDate);
         })
         .map(({ text, done, id }) => {
 
