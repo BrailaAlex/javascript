@@ -80,7 +80,7 @@ const checkIfDone = (event) => {
 
     const getId = tasks.find(elem => elem.id === +checkedElem.parentElement.dataset.id);
     getId.done = checkedElem.checked;
-    getId.doneDate = getId.done ? new Date() : undefined;
+    getId.doneDate = new Date();
 
     listElem.innerHTML = '';
     renderListItems(tasks);
