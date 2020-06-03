@@ -52,3 +52,7 @@ function makeCounter() {
 //     }
 //     outer: < Reference to the parent lexical environment>
 //   }
+The environment record is the actual place where the variable and
+function declarations are stored.
+    // The reference to the outer environment means it has access to its outer (parent) lexical environment.
+    // This component is the most important in order to understand how closures work.

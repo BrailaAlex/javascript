@@ -1,7 +1,7 @@
 import { tasks } from './storage.js';
 import { renderListItems } from './taskslist.js';
 import { createTask, listElem } from './create.js';
-// import { checkIfDone } from './checkitems.js';
+import { checkIfDone } from './checkitems.js';
 
 
 // const listElem = document.querySelector('.list');
@@ -12,17 +12,17 @@ document.addEventListener('DOMContentLoaded', () => {
     renderListItems(tasks);
 })
 
-const checkIfDone = (event) => {
-    const checkedElem = event.target;
-    if (checkedElem.tagName != 'INPUT') return;
+// const checkIfDone = (event) => {
+//     const checkedElem = event.target;
+//     if (checkedElem.tagName != 'INPUT') return;
 
-    const getId = tasks.find(elem => elem.id === +checkedElem.parentElement.dataset.id);
-    getId.done = checkedElem.checked;
-    getId.doneDate = new Date();
+//     const getId = tasks.find(elem => elem.id === +checkedElem.parentElement.dataset.id);
+//     getId.done = checkedElem.checked;
+//     getId.doneDate = new Date();
 
-    listElem.innerHTML = '';
-    renderListItems(tasks);
-};
+//     listElem.innerHTML = '';
+//     renderListItems(tasks);
+// };
 
 listElem.addEventListener('click', checkIfDone);
 
