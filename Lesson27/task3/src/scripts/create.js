@@ -7,19 +7,17 @@ export const listElem = document.querySelector('.list');
 
 export const createTask = () => {
     if (inputElem.value == '') return;
-    todoList.push({
-        id: todoList.length + 1,
+    const check = getItem('todoList');
+    console.log(check);
+    check.push({
+        id: check.length + 1,
         text: inputElem.value,
         done: false,
         createDate: new Date(),
         checkDate: undefined,
     });
-    setItem('todoList', todoList);
-
+    setItem('todoList', check);
     inputElem.value = '';
-    console.log(getItem('todoList'));
-    console.log(todoList);
-
     listElem.innerHTML = '';
     renderListItems(getItem('todoList'));
 };
