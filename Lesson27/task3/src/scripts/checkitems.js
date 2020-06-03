@@ -1,4 +1,3 @@
-import { todoList } from './todoList.js';
 import { renderListItems } from './renderListItems.js';
 import { listElem } from './create.js';
 import { setItem, getItem } from './storage.js';
@@ -6,7 +5,7 @@ import { setItem, getItem } from './storage.js';
 export const checkIfDone = (event) => {
     const checkedElem = event.target;
     if (checkedElem.tagName != 'INPUT') return;
-    const tasks = getItem('todoList');
+    const tasks = getItem('tasksList');
     console.log(tasks);
     const getId = tasks.find(elem => elem.id === +checkedElem.parentElement.dataset.id);
     getId.done = checkedElem.checked;
@@ -14,8 +13,8 @@ export const checkIfDone = (event) => {
 
     console.log(tasks);
     listElem.innerHTML = '';
-    setItem('todoList', tasks);
+    setItem('tasksList', tasks);
     console.log(tasks);
-    console.log(getItem('todoList'));
+    console.log(getItem('tasksList'));
     renderListItems(tasks);
 };

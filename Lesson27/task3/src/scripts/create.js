@@ -1,4 +1,4 @@
-import { todoList } from './todoList.js';
+// import { todoList } from './todoList.js';
 import { setItem, getItem } from './storage.js';
 import { renderListItems } from './renderListItems.js';
 
@@ -7,8 +7,7 @@ export const listElem = document.querySelector('.list');
 
 export const createTask = () => {
     if (inputElem.value == '') return;
-    const check = getItem('todoList');
-    console.log(check);
+    const check = getItem('tasksList');
     check.push({
         id: check.length + 1,
         text: inputElem.value,
@@ -16,8 +15,9 @@ export const createTask = () => {
         createDate: new Date(),
         checkDate: undefined,
     });
-    setItem('todoList', check);
+    setItem('tasksList', check);
     inputElem.value = '';
     listElem.innerHTML = '';
-    renderListItems(getItem('todoList'));
+    console.log(check);
+    renderListItems(check);
 };

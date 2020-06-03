@@ -6,7 +6,7 @@ export const setItem = (key, value) => {
 
 export const getItem = key => {
     if (localStorage.getItem(key) === null) {
-        setItem('todoList', todoList);
+        setItem('tasksList', todoList);
     }
     return JSON.parse(localStorage.getItem(key))
 };
