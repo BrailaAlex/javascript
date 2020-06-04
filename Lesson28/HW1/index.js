@@ -15,7 +15,7 @@ export const shmoment = initValue => {
             actualDate = new Date(timeIncrease[digit](value));
             return calculator;
         },
-        subtract(value) {
+        subtract(digit, value) {
             let timeDecrease = {
                 milliseconds: (value) => (actualDate.setMilliseconds(actualDate.getMilliseconds() - value)),
                 seconds: (value) => (actualDate.setSeconds(actualDate.getSeconds() - value)),
