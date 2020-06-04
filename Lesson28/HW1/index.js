@@ -1,5 +1,5 @@
-export const shmoment = initValue => {
-    let actualDate = initValue;
+const shmoment = initValue => {
+    let actualDate = new Date(initValue);
     console.log(actualDate);
     const calculator = {
         add(digit, value) {
@@ -37,3 +37,4 @@ export const shmoment = initValue => {
 };
 
 // console.log(shmoment(new Date(2020, 0, 7, 17, 17, 17)).add('minutes', 17).result());
+export { shmoment };
