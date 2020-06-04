@@ -4,20 +4,20 @@
 
 //doEverything
 
-const add3 = value => value + 3;
-const mult2 = value => value * 2;
-const div4 = value => value / 4;
+// const add3 = value => value + 3;
+// const mult2 = value => value * 2;
+// const div4 = value => value / 4;
 
 
-const compose = (...arguments) => value => {
+export const compose = (...arguments) => value => {
     console.log(arguments);
     return [...arguments].reduce((acc, func) => func(acc), value);
 };
 
-const doEverything = compose(
-    add3,
-    mult2,
-    div4,
-);
+// const doEverything = compose(
+//     add3,
+//     mult2,
+//     div4,
+// );
 
-console.log(doEverything(3));
+// console.log(doEverything(3));
