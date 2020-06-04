@@ -1,25 +1,25 @@
-// const favourites = ['id-6', 'id-7'];
+const favorites = ['id-6', 'id-7'];
 
-// const tree = {
-//     id: 'id-1',
-//     name: 'Products',
-//     nodes: [{
-//         id: 'id-6',
-//         name: 'food',
-//         nodes: [{
-//             id: 'id-7',
-//             name: "chps'",
-//             nodes: []
-//         }, ],
-//     }, ],
-// }
+const tree = {
+    id: 'id-1',
+    name: 'Products',
+    nodes: [{
+        id: 'id-6',
+        name: 'food',
+        nodes: [{
+            id: 'id-7',
+            name: "chps'",
+            nodes: []
+        }, ],
+    }, ],
+}
 
-export const markFavourites = (tree, favourites) => {
-    const isFavourite = favourites.includes(tree.id); //checks if node contains requested id on every step when we go deeper;
+export const markFavorites = (tree, favorites) => {
+    const isFavorite = favorites.includes(tree.id); //checks if node contains requested id on every step when we go deeper;
     return {
         ...tree,
-        isFavourite,
-        nodes: tree.nodes.map(childNode => markFavourites(childNode, favourites))
+        isFavorite,
+        nodes: tree.nodes.map(childNode => markFavorites(childNode, favourites))
     }
 };
 // const result = markFavourites(tree, favourites);
