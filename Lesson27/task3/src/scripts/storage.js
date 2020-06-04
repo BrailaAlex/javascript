@@ -10,3 +10,11 @@ export const getItem = key => {
     }
     return JSON.parse(localStorage.getItem(key))
 };
+
+export const onStorageChange = event => {
+    if (event.key !== "tasksList") {
+        return;
+    }
+    setItem('tasksList', getItem('tasksList'));
+
+};

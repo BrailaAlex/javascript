@@ -18,6 +18,5 @@ export const createTask = () => {
     setItem('tasksList', check);
     inputElem.value = '';
     listElem.innerHTML = '';
-    console.log(check);
     renderListItems(check);
 };
