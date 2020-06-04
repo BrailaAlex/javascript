@@ -14,6 +14,7 @@
 //     }, ],
 // }
 
+
 export const markFavorites = (tree, favorites) => {
     const isFavorite = favorites.includes(tree.id); //checks if node contains requested id on every step when we go deeper;
 
