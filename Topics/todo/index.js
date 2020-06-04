@@ -60,12 +60,12 @@ const renderTasks = tasksList => {
 
 renderTasks(tasks);
 
-listElem.addEventListener('click', udateTask);
+listElem.addEventListener('click', updateTask);
 
-function udateTask(event) {
+function updateTask(event) {
     const checkedElem = event.target;
     console.log(checkedElem);
-    if (checkedElem.tagName != 'INPUT') return;
+    if (!checkedElem.classList.contains('list__item-checkbox')) return;
 
     const task = tasks.find(task => task.id === +checkedElem.dataset.taskId);
     console.log(task);
