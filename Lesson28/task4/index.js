@@ -9,9 +9,8 @@
 // const div4 = value => value / 4;
 
 
-export const compose = (...arguments) => value => {
-    console.log(arguments);
-    return [...arguments].reduce((acc, func) => func(acc), value);
+export const compose = (...funcs) => value => {
+    return funcs.reduce((acc, func) => func(acc), value);
 };
 
 // const doEverything = compose(
