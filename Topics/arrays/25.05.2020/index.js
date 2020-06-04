@@ -31,4 +31,4 @@ function multiply() {
     return [...args].reduce((acc, el) => acc * el);
 }
 
-// console.log(multiply2(123, 123, 123));
+// console.log(multiply(123, 123, 123));
