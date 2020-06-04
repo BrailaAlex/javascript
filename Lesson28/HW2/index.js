@@ -13,3 +13,5 @@ const maxFibonacci = (arg) => {
 }
 
 // console.log(maxFibonacci(53));
+
+export { maxFibonacci };
