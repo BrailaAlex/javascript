@@ -12,7 +12,7 @@ const calc = initValue => {
             console.log(this);
             return this;
         },
-        substract(value) {
+        subtract(value) {
             result -= value;
             return this;
         },
