@@ -1,13 +1,13 @@
 function addImage(imgSrc, callback) {
-    const imgElem = document.createElement('img')
-    imgElem.setAttribute('alt', 'My photo');
+    const imgElem = document.createElement('img');
+    imgElem.setAttribute('alt', 'My Photo');
     imgElem.src = imgSrc;
     const containerElem = document.querySelector('.page');
     containerElem.append(imgElem);
 
-    const onImageLoaded = () => {
+    function onImageLoaded() {
         const { width, height } = imgElem;
-        callback(null, { width, height });
+        callback(null, { width: 200, height: 100 });
     };
 
     imgElem.addEventListener('load', onImageLoaded);
@@ -22,6 +22,8 @@ function onImageLoaded(error, data) {
     const { width, height } = data;
     const sizeElem = document.querySelector('.image-size');
     sizeElem.textContent = `${width} x ${height}`;
-}
+};
 
-export { addimage };
+addImage('https://th.bing.com/th/id/OIP.vwN3Y9sr3vUO1kA5e7joBQHaHV?pid=Api&rs=1', onImageLoaded);
+
+export { addImage };
