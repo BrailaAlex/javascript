@@ -16,23 +16,21 @@ const addImage = (imgSrc, callback) => {
     };
 
     imgElem.addEventListener('load', onImageLoaded);
-
-
     imgElem.addEventListener('error', () => callback('Image load failed'));
 };
 
-const imgSrc = 'https://www.w3schools.com/w3css/img_nature.jpg';
+// const imgSrc = 'https://www.w3schools.com/w3css/img_nature.jpg';
 
 const onImageLoaded = (error, data) => {
     if (error) {
         console.log(error);
-        return
+        return;
     }
     const { width, height } = data;
     const sizeElem = document.querySelector('.image-size');
     sizeElem.textContent = `${width} x ${height}`;
 }
 
-addImage(imgSrc, onImageLoaded);
+// addImage(imgSrc, onImageLoaded);
 
 export { addimage };
