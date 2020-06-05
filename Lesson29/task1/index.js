@@ -1,9 +1,4 @@
-//add Image
-
-
-
-
-const addImage = (imgSrc, callback) => {
+function addImage(imgSrc, callback) {
     const imgElem = document.createElement('img')
     imgElem.setAttribute('alt', 'My photo');
     imgElem.src = imgSrc;
@@ -19,9 +14,7 @@ const addImage = (imgSrc, callback) => {
     imgElem.addEventListener('error', () => callback('Image load failed'));
 };
 
-// const imgSrc = 'https://www.w3schools.com/w3css/img_nature.jpg';
-
-const onImageLoaded = (error, data) => {
+function onImageLoaded(error, data) {
     if (error) {
         console.log(error);
         return;
@@ -30,7 +23,5 @@ const onImageLoaded = (error, data) => {
     const sizeElem = document.querySelector('.image-size');
     sizeElem.textContent = `${width} x ${height}`;
 }
-
-// addImage(imgSrc, onImageLoaded);
 
 export { addimage };
