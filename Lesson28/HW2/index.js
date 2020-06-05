@@ -7,11 +7,17 @@ const maxFibonacci = (arg) => {
     let nextEl = 0;
     while (nextEl <= arg) {
         resultArr.push(nextEl);
+        console.log(nextEl);
         nextEl = resultArr[resultArr.length - 1] + resultArr[resultArr.length - 2];
     }
     return Math.max(...resultArr);
 }
 
-// console.log(maxFibonacci(53));
+// const maxFibonacci = (n) => {
+//     // return arg <= 1 ? arg : maxFibonacci(arg - 1);
+//     return n <= 1 ? n : maxFibonacci(n - 2) + maxFibonacci(n - 3)
 
-export { maxFibonacci };
+// }
+console.log(maxFibonacci(123));
+
+// export { maxFibonacci };
