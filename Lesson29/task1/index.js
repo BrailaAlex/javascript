@@ -35,4 +35,4 @@ const onImageLoaded = (error, data) => {
 
 addImage(imgSrc, onImageLoaded);
 
-// export { addimage };
+export { addimage };
