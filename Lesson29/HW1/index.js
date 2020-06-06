@@ -8,13 +8,14 @@ const requestUserData = (userId, callback) => {
     //     userId,
     //     email: userId + '@example.com'
     // };
+
     callback({
         userId,
         email: `${userId}@example.com`,
     });
 
-    setTimeout(() => callback(object, null), Math.floor(Math.random() * 3 + 1) * 1000);
-}
+    const callUser = setTimeout(() => callback(object, null), Math.floor(Math.random() * 3 + 1) * 1000);
+};
 
 
 // const requestUserData = (userId, callback) => {
