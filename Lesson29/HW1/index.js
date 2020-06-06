@@ -9,15 +9,17 @@ const requestUserData = (userId, callback) => {
         email: userId + '@example.com'
     };
 
-    setTimeout(callback(null, object), Math.floor(Math.random() * 3 + 1) * 1000);
+    callback = (object);
+
+    setTimeout(callback, Math.floor(Math.random() * 3 + 1) * 1000);
 }
 
-function callback(error, data) {
-    console.log(data);
+// function callback(error, data) {
+//     console.log(data);
 
-}
+// }
 
 
-requestUserData('userId777', callback);
+// requestUserData('userId777', callback);
 
 export { requestUserData };
