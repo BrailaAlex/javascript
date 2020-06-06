@@ -4,13 +4,18 @@ const requestUserData = (userId, callback) => {
         return;
     }
 
-    const object = {
+    // const object = {
+    //     userId,
+    //     email: userId + '@example.com'
+    // };
+    callback({
         userId,
-        email: userId + '@example.com'
-    };
+        email: `${userId}@example.com`,
+    });
 
-    const callUser = setTimeout(() => callback(object, null), Math.floor(Math.random() * 3 + 1) * 1000);
+    setTimeout(() => callback(object, null), Math.floor(Math.random() * 3 + 1) * 1000);
 }
+
 
 // const requestUserData = (userId, callback) => {
 //     if (userId == 'broken') {
