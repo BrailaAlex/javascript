@@ -5,7 +5,7 @@ const requestUserData = (userId, callback) => {
     }
     let object = {
         userId,
-        email: 'userid777@example.com'
+        email: userId + '@example.com',
     };
 
     callback = (object);
