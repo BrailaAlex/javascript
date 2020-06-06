@@ -7,17 +7,16 @@ const addImageV2 = url => {
         const pageElem = document.querySelector('.page');
         pageElem.append(img);
 
-        // const onImageLoaded = () => {
-        //     const { width, height } = img;
-        //     resolve({ width, height });
-        // }
-
-        img.addEventListener('load', () => {
+        const onImageLoaded = () => {
             const { width, height } = img;
             resolve({ width, height });
-        });
+        }
 
-        img.addEventListener('error', () => reject(new Error('Image load failed')));
+        img.addEventListener('load', onImageLoaded);
+
+        const onImageLoadError = () => reject(new Error('Image load failed'))
+
+        img.addEventListener('error', onImageLoadError);
     });
 }
 const res = 'https://wallpapershome.com/images/wallpapers/rihan-1080x1920-top-music-artist-and-bands-singer-actress-510.jpg';
