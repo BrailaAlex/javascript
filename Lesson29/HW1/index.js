@@ -8,11 +8,15 @@ const requestUserData = (userId, callback) => {
         email: userId + '@example.com',
     };
 
-    const { userId, email } = object;
-
-    setTimeout(callback(null, { userId, email }), Math.floor(Math.random() * 3 + 1) * 1000);
+    setTimeout(callback(null, object), Math.floor(Math.random() * 3 + 1) * 1000);
 }
 
-// requestUserData('broken');
+// function callback(error, data) {
+//     console.log(data);
+
+// }
+
+
+// requestUserData('broken', callback);
 
 export { requestUserData };
