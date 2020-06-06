@@ -19,12 +19,12 @@ const requestUserData = (userId, callback) => {
     setTimeout(callback(null, dataObj), Math.floor(Math.random() * 3 + 1) * 1000);
 }
 
-function callback(error, data) {
-    console.log(data);
+// function callback(error, data) {
+//     console.log(data);
 
-}
+// }
 
 
-requestUserData('Alex', callback);
+// requestUserData('Alex', callback);
 
 export { requestUserData };
