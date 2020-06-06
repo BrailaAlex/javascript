@@ -4,8 +4,6 @@ const requestUserData = (userId, callback) => {
         return;
     }
     let object = {
-        name: 'John',
-        age: 17,
         userId,
         email: 'userid777@example.com'
     };
