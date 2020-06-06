@@ -4,7 +4,7 @@
  */
 
 const failedPromise = new Promise((resolve, reject) => {
-    reject('Oops, error!');
+    reject(new Error('Oops, error!'));
 });
 
 /*
