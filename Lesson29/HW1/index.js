@@ -14,7 +14,7 @@ const requestUserData = (userId, callback) => {
         email: `${userId}@example.com`,
     });
 
-    const callUser = setTimeout(callback, Math.floor(Math.random() * 3 + 1) * 1000);
+    setTimeout(callback, Math.floor(Math.random() * 3 + 1) * 1000);
 };
 
 
