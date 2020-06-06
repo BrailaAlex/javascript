@@ -8,8 +8,9 @@ const requestUserData = (userId, callback) => {
         email: userId + '@example.com',
     };
 
-    callback = (object);
-    setTimeout(callback, Math.floor(Math.random() * 3 + 1) * 1000);
+    const { userId, email } = object;
+
+    setTimeout(callback(null, { userId, email }), Math.floor(Math.random() * 3 + 1) * 1000);
 }
 
 // requestUserData('broken');
