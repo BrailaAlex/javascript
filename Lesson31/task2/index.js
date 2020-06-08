@@ -20,5 +20,7 @@ const asyncCalculator = num => new Promise((resolve) => {
             return result;
         }))
     .then(res => res);
-asyncCalculator(5);
+
 export { asyncCalculator };
+
+// asyncCalculator(5);
