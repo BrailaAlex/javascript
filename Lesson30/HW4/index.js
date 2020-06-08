@@ -1,5 +1,5 @@
 const addImageV2 = url => {
-    return new Promise((resolve, reject) => {
+    return new Promise(function addImage(resolve, reject) {
         const img = document.createElement('img');
         img.setAttribute('alt', 'User avatar');
         img.src = url;
