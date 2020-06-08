@@ -1,4 +1,4 @@
-const addImageV2 = url => {
+export const addImageV2 = url => {
     return new Promise(function addImage(resolve, reject) {
         const img = document.createElement('img');
         img.setAttribute('alt', 'User avatar');
