@@ -53,3 +53,5 @@ const timer = {
     }
     // timer.startTimer();
     // timer.stopTimer();/
+
+export { timer };
