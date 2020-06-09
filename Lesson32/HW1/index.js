@@ -9,7 +9,7 @@ const makePromis = value => {
 /*
  * пример использования
  */
-makePromise(17)
-    .then(number => {
-        console.log(number); // 17
-    });
+// makePromise(17)
+//     .then(number => {
+//         console.log(number); // 17
+//     });
