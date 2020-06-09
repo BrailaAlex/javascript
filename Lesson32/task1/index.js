@@ -10,16 +10,16 @@
 
 // const rejectedPromise2 = new Promise((_, reject) => reject(new Error('error')));
 
-const getValueWithDelay = (value, delay) => new Promise(resolve => {
-    setTimeout(() => {
-        console.log(value);
-        resolve(value);
-    }, delay);
-});
+// const getValueWithDelay = (value, delay) => new Promise(resolve => {
+//     setTimeout(() => {
+//         console.log(value);
+//         resolve(value);
+//     }, delay);
+// });
 
-const asyncNum1 = getValueWithDelay(56, 1000);
-const asyncNum2 = getValueWithDelay(undefined, 2000);
-const asyncNum3 = getValueWithDelay('10', 3000);
+// const asyncNum1 = getValueWithDelay(56, 1000);
+// const asyncNum2 = getValueWithDelay(undefined, 2000);
+// const asyncNum3 = getValueWithDelay('10', 3000);
 
 const getSum = numbers =>
     numbers
