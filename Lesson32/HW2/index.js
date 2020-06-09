@@ -17,3 +17,5 @@ resultPromise(promiseNumber1, promiseNumber2, promiseNumber3)
     .then(result => {
         console.log(result); // 98
     });
+
+export { resultPromise };
