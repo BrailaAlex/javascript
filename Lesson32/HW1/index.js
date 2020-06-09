@@ -3,11 +3,12 @@
  */
 
 const makePromis = value => {
-    return Promise.resolve(value);
+    return Promise.resolve(value)
+        .then((value) => value);
 }
 
 export { makePromis };
-
+// makePromis(21);
 /*
  * пример использования
  */
