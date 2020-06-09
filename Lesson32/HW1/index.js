@@ -2,12 +2,11 @@
  * ф-ция makePromise должна вернуть промис со значением переданным в ф-цию
  */
 
-const makePromis = value => {
-    return Promise.resolve(value)
-        .then((value) => value);
-}
+const makePromise = value => Promise.resolve(value);
 
-export { makePromis };
+
+
+export { makePromise };
 // makePromis(21);
 /*
  * пример использования
