@@ -6,6 +6,8 @@ const makePromis = value => {
     return Promise.resolve(value);
 }
 
+export { makePromis };
+
 /*
  * пример использования
  */
