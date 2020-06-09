@@ -1,9 +1,13 @@
+const servers = [
+    'https://server.com/us',
+    'https://server.com/eu',
+    'https://server.com/au',
+]
 getrandomNumber = (from, to) => {
     from + Math.random() * (to - from);
 }
 
 const request = url => new Promise(resolve => {
-    const randomDelay = getrandomNumber(1000, 3000);
     setTimeout(() => {
         resolve({
             userData: {
@@ -12,22 +16,18 @@ const request = url => new Promise(resolve => {
             },
             source: url
         });
-    }, randomDelay);
+    }, Math.random() * 3000 + 1000);
 
 });
 
-const servers = [
-    'https://server.com/us',
-    'https://server.com/eu',
-    'https://server.com/au',
-]
 
 const getUserASAP = userId => {
     const userUrls = servers
         .map(serverUrl => `${serverUrl}/${userId}`);
-
+    console.log(userUrls);
     const requests = userUrls
         .map(userUrl => request(userUrl));
+    console.log(userUrls);
 
     return Promise.race(requests);
 };
