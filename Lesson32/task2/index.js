@@ -2,10 +2,7 @@ const servers = [
     'https://server.com/us',
     'https://server.com/eu',
     'https://server.com/au',
-]
-getrandomNumber = (from, to) => {
-    from + Math.random() * (to - from);
-}
+];
 
 const request = url => new Promise(resolve => {
     setTimeout(() => {
