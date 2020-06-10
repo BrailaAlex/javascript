@@ -15,3 +15,4 @@ const getTaskById = taskId => getTasksList(baseUrl)
 
 // getTaskById(20)
 //     .then(task => console.log(task));
+export { getTasksList, getTaskById };
