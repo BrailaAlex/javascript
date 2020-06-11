@@ -16,7 +16,7 @@ export function createUser(userObj) {
     return fetch(rootUrl, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json;charset=utf-8',
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify(userObj)
     })
@@ -26,7 +26,7 @@ export function updateUser(UserId, userObj) {
     return fetch(`${rootUrl}/${UserId}`, {
         method: 'PUT',
         headers: {
-            'Content-Type': 'application/json;charset=utf-8',
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify(userObj)
     })
