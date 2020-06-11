@@ -1,10 +1,12 @@
-// baseUrl = 'https://5ee220bb8b27f3001609462e.mockapi.io/api/v1/users';
+const baseUrl = 'https://5ee220bb8b27f3001609462e.mockapi.io/api/v1/users';
 
 /* getUsersList code here */
 function getUsersList() {
     return fetch(baseUrl)
         .then(response => response.json())
 };
+// getUsersList()
+//     .then(value => console.log(value))
 
 /* getUserById code here */
 function getUserById(userId) {
@@ -21,6 +23,15 @@ function createUser(userObj) {
         body: JSON.stringify(userObj)
     })
 };
+
+// const newUserData = {
+//     email: "cool@email.com",
+//     firstName: 'Iron',
+//     lastName: 'Man',
+//     age: 42,
+// };
+// createUser(newUserData)
+//     .then(() => console.log('User created'));
 
 function updateUser(userId, userObj) {
     return fetch(`${baseUrl}/${userId}`, {
