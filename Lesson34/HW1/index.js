@@ -1,18 +1,18 @@
-rootUrl = 'https://5ee220bb8b27f3001609462e.mockapi.io/api/v1/users';
+// rootUrl = 'https://5ee220bb8b27f3001609462e.mockapi.io/api/v1/users';
 
 /* getUsersList code here */
-const getUsersList = () => {
+export const getUsersList = () => {
     return fetch(rootUrl)
         .then(response => response.json());
 };
 
 /* getUserById code here */
-const getUserById = UserId => {
+export const getUserById = UserId => {
     return fetch(`${rootUrl}/${UserId}`)
         .then(response => response.json());
 };
 
-const createUser = userObj => {
+export const createUser = userObj => {
     return fetch(rootUrl, {
         method: 'POST',
         headers: {
@@ -22,7 +22,7 @@ const createUser = userObj => {
     });
 };
 
-const updateUser = (UserId, userObj) => {
+export const updateUser = (UserId, userObj) => {
     return fetch(`${rootUrl}/${UserId}`, {
         method: 'PUT',
         headers: {
@@ -32,10 +32,10 @@ const updateUser = (UserId, userObj) => {
     });
 };
 
-const deleteUser = UserId => {
+export const deleteUser = UserId => {
     return fetch(`${rootUrl}/${UserId}`, {
         method: 'DELETE',
     });
 };
 
-export { deleteUser, updateUser, createUser, getUserById, getUsersList };
+// export { deleteUser, updateUser, createUser, getUserById, getUsersList };
