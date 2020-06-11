@@ -1,18 +1,18 @@
 // rootUrl = 'https://5ee220bb8b27f3001609462e.mockapi.io/api/v1/users';
 
 /* getUsersList code here */
-export function getUsersList() {
+function getUsersList() {
     return fetch(rootUrl)
         .then(response => response.json())
 };
 
 /* getUserById code here */
-export function getUserById(UserId) {
+function getUserById(UserId) {
     return fetch(`${rootUrl}/${UserId}`)
         .then(response => response.json())
 };
 
-export function createUser(userObj) {
+function createUser(userObj) {
     return fetch(rootUrl, {
         method: 'POST',
         headers: {
@@ -22,7 +22,7 @@ export function createUser(userObj) {
     })
 };
 
-export function updateUser(UserId, userObj) {
+function updateUser(UserId, userObj) {
     return fetch(`${rootUrl}/${UserId}`, {
         method: 'PUT',
         headers: {
@@ -32,10 +32,10 @@ export function updateUser(UserId, userObj) {
     })
 };
 
-export function deleteUser(UserId) {
+function deleteUser(UserId) {
     return fetch(`${rootUrl}/${UserId}`, {
         method: 'DELETE',
     })
 };
 
-// export { deleteUser, updateUser, createUser, getUserById, getUsersList };
+export { deleteUser, updateUser, createUser, getUserById, getUsersList };
