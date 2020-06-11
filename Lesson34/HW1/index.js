@@ -1,4 +1,4 @@
-baseUrl = 'https://5ee220bb8b27f3001609462e.mockapi.io/api/v1/users';
+// baseUrl = 'https://5ee220bb8b27f3001609462e.mockapi.io/api/v1/users';
 
 /* getUsersList code here */
 function getUsersList() {
