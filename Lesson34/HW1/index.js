@@ -7,8 +7,8 @@ function getUsersList() {
 };
 
 /* getUserById code here */
-function getUserById(UserId) {
-    return fetch(`${baseUrl}/${UserId}`)
+function getUserById(userId) {
+    return fetch(`${baseUrl}/${userId}`)
         .then(response => response.json())
 };
 
@@ -22,8 +22,8 @@ function createUser(userObj) {
     })
 };
 
-function updateUser(UserId, userObj) {
-    return fetch(`${baseUrl}/${UserId}`, {
+function updateUser(userId, userObj) {
+    return fetch(`${baseUrl}/${userId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
@@ -32,8 +32,8 @@ function updateUser(UserId, userObj) {
     })
 };
 
-function deleteUser(UserId) {
-    return fetch(`${baseUrl}/${UserId}`, {
+function deleteUser(userId) {
+    return fetch(`${baseUrl}/${userId}`, {
         method: 'DELETE',
     })
 };
