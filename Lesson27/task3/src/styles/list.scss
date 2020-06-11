@@ -17,7 +17,7 @@
     width: 100%;
 }
 
-.list__item {
+.list-item {
     display: flex;
     align-items: center;
     height: 40px;
@@ -25,17 +25,14 @@
     background-color: wheat;
     margin-bottom: 8px;
     padding: 8px;
-}
-
-.list__item_done {
-    text-decoration: line-through;
-    opacity: 0.5;
-}
-
-.list__item:last-child {
-    margin-bottom: 0;
-}
-
-.list__item-checkbox {
-    margin-right: 8px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &__done {
+        text-decoration: line-through;
+        opacity: 0.5;
+    }
+    &__checkbox {
+        margin-right: 8px;
+    }
 }

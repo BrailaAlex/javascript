@@ -28,10 +28,30 @@ function myBind1(func, context) {
 // console.log(user.func);
 // user.func(50, 'Kyiv');
 
+// input: func, Object
+// output: func
+
 function myBind2(func, context) {
-    let newContext = {...context, func }
-    return newContext;
+    // 1. add func into context
+    // 2. call func and return result
+    return function(...args) {
+        let copyContext = {...context, func }
+        console.log(copyContext.func);
+        return copyContext.func(...args);
+    }
+
 }
 
-let bindedPrintMessage = myBind2(printMessage, user);
-bindedPrintMessage.func(50, 'Kyiv');
+//input: func, obj
+//output: func
+
+function myBindWithApply(func, context) {
+    return function(...args) {
+        let funcResult = func.apply(context, args);
+        return funcResult;
+    }
+
+}
+
+let bindedPrintMessage = myBindWithApply(printMessage, user);
+bindedPrintMessage(50, 'Kyiv');
