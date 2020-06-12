@@ -28,7 +28,7 @@ const onsendData = event => {
         })
         .then(response => response.json())
         .then(userData => {
-            console.log(userData);
+            // console.log(userData);
             inputs.map(elem => elem.value = '');
             submitBtnElem.disabled = true;
             alert(JSON.stringify(userData));

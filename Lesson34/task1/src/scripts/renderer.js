@@ -46,10 +46,9 @@ const compareTasks = (a, b) => {
 
 
 function renderTasks() {
-    let tasksList = [];
     return getTasksList()
-        .then(value => {
-            tasksList = value;
+        .then(tasksList => {
+            console.log(tasksList)
             listElem.innerHTML = '';
             const tasksElems = tasksList
                 .sort(compareTasks)
