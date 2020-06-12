@@ -1,5 +1,5 @@
 window.addEventListener("error", function onUnhandledError(err) {
-    console.error("error", err.message);
+    console.error("error", err.message); //подписка на необработанніе ошибки
 });
 
 let userParsingResult;
