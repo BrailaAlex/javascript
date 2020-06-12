@@ -4,23 +4,17 @@ import { updateTask, getTasksList, getTaskById } from './tasksGateway.js'
 function onToggleTask(event) {
     const isCheckbox = event.target.classList.contains('list-item__checkbox');
     if (!isCheckbox) return;
-
     const taskId = event.target.dataset.id;
-    console.log(event.target);
     getTaskById(taskId)
         .then(task => {
-            console.log(task);
             const { id, finishDate, done } = task;
-            if (!done) finishDate === null;
             task.done = event.target.checked;
             task.finishDate = done ? new Date().toISOString() : null;
             updateTask(id, task)
-                .then(() => getTasksList())
                 .then(() => {
                     renderTasks();
                 });
         });
-
 };
 
 export { onToggleTask };
