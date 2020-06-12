@@ -8,8 +8,8 @@ function onToggleTask(event) {
     getTaskById(taskId)
         .then(task => {
             const { id, finishDate, done } = task;
-            task.done = event.target.checked;
-            task.finishDate = done ? new Date().toISOString() : null;
+            task[done] = event.target.checked;
+            task[finishDate] = done ? new Date().toISOString() : null;
             updateTask(id, task)
                 .then(() => {
                     renderTasks();
