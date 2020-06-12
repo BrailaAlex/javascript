@@ -7,10 +7,9 @@ function onDeleteTask() {
     if (!isDeleteBtn) return;
 
     const nearestInputId = event.target.parentNode.firstElementChild.dataset.id;
-
     deleteTask(nearestInputId)
         .then(() => getTasksList())
-        .then(newTasksList => {
+        .then(() => {
             renderTasks();
         });
 };
