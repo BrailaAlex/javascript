@@ -7,8 +7,9 @@ function onToggleTask(event) {
     const taskId = event.target.dataset.id;
     getTaskById(taskId)
         .then(task => {
+            console.log(task);
             const { id, finishDate, done } = task;
-            task[done] = event.target.checked;
+            task.done = event.target.checked;
             task[finishDate] = done ? new Date().toISOString() : null;
             updateTask(id, task)
                 .then(() => {

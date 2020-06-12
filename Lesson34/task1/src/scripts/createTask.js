@@ -21,6 +21,7 @@ function onCreateTask() {
         .then(newTasksList => {
             renderTasks(newTasksList);
         });
+    console.log(newTask);
     taskTitleInputElem.value = '';
 };
 
