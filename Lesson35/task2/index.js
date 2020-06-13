@@ -20,9 +20,9 @@ failRequest
         console.log("onSuccess2", data);
         throw error;
     })
-    // .catch(function onError3(error) {
-    //     console.error("onError3", error.message);
-    // });
+    .catch(function onError3(error) {
+        console.error("onError3", error.message);
+    });
 
 window.addEventListener('unhandledrejection', function(e) {
     console.log(e.reason.message);
