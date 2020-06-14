@@ -15,7 +15,7 @@ const fetchUsers = async users => {
 // const usersArr = ['facebook', 'google'];
 const getUsersBlogs = async usersArr => {
     try {
-        const usersData = await Promise.all(fetch(usersArr));
+        const usersData = await Promise.all(fetchUsers(usersArr));
         return usersData;
     } catch (err) {
         console.log(err);
