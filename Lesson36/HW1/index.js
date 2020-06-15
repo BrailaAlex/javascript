@@ -22,8 +22,8 @@ const getUsersBlogs = usersArr => {
     }
 };
 
-const usersArr = ['facebook', 'google'];
-getUsersBlogs(usersArr)
-    .then(list => console.log(list));
+// const usersArr = ['facebook', 'google'];
+// getUsersBlogs(usersArr)
+//     .then(list => console.log(list));
 
 export { getUsersBlogs };
