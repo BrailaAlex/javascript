@@ -22,6 +22,7 @@ class Swimmer extends Sportsman {
 
 }
 
-// const s = new Swimmer('Tom', 'breaststroke');
-// s.swim();
+const s = new Swimmer('Tom', 'breaststroke');
+console.log(s);
+s.swim();
 export { Sportsman, Swimmer };
