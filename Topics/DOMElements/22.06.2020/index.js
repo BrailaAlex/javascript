@@ -1,13 +1,13 @@
 const setButton = (buttonText) => {
 	// const button = `<button>${buttonText}</button>`;
 	// document.querySelector("body").innerHTML = button;
-	const button = document.createElement("button");
-	button.textContent = buttonText;
-	document.querySelector("body").append(button);
+	// const button = document.createElement("button");
+	// button.textContent = buttonText;
+	// document.querySelector("body").append(button);
 
-	// return (document.querySelector(
-	// 	"body"
-	// ).innerHTML = `<button>${buttonText}</button>`);
+	return (document.querySelector(
+		"body"
+	).innerHTML = `<button>${buttonText}</button>`);
 };
-setButton("Login");
+// setButton("Login");
 export { setButton };
