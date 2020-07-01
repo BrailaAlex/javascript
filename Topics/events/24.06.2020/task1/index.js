@@ -1,11 +1,6 @@
-const listElem = document.querySelector(".list");
-
 const onListElemCons = (e) => {
-  if (!e.target.classList.contains("list-item")) {
-    return;
-  }
-  console.log(e.target.textContent);
-  //   console.log(e.target);
+  if (e.target.classList.contains("list-item"))
+    console.log(e.target.textContent);
 };
 
-listElem.addEventListener("click", onListElemCons);
+document.querySelector(".list").addEventListener("click", onListElemCons);
